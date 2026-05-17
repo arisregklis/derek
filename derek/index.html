@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derek | Author &amp; Writer</title>
+  <meta name="description" content="Official website of Derek — author of literary fiction, essays, and short stories." />
+  <meta property="og:title" content="Derek | Author & Writer" />
+  <meta property="og:description" content="Three books. One voice. Somewhere between silence and the weight of memory." />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Lemon Squeezy -->
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:      '#0D0B09',
+            surface: '#161210',
+            surf2:   '#1E1A16',
+            border:  '#2A2520',
+            text:    '#F0EBE3',
+            muted:   '#7A7068',
+            accent:  '#C9A86C',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-bg text-text font-sans antialiased">
+
+  <!-- ══════════════════════════════════════════
+       INTRO OVERLAY
+  ══════════════════════════════════════════ -->
+  <div id="site-intro" role="presentation" aria-hidden="true">
+    <!-- Ambient light -->
+    <div class="intro-glow-1" aria-hidden="true"></div>
+    <div class="intro-glow-2" aria-hidden="true"></div>
+    <!-- Corner ornaments (drawn in by JS trigger) -->
+    <div class="intro-corner intro-corner--tl" aria-hidden="true"></div>
+    <div class="intro-corner intro-corner--tr" aria-hidden="true"></div>
+    <div class="intro-corner intro-corner--bl" aria-hidden="true"></div>
+    <div class="intro-corner intro-corner--br" aria-hidden="true"></div>
+    <!-- Content -->
+    <div class="intro-inner">
+      <div class="intro-line" aria-hidden="true"></div>
+      <p class="intro-quote"></p>
+      <div class="intro-line intro-line--2" aria-hidden="true"></div>
+      <p class="intro-author">— Derek</p>
+    </div>
+    <button class="intro-skip" aria-label="Skip introduction">Skip</button>
+    <div class="intro-progress" aria-hidden="true"></div>
+  </div>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+
+      <a href="#" class="font-serif font-bold text-xl text-text tracking-wide">Derek</a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#books"   class="nav-link" data-en="Books"   data-gr="Βιβλία">Books</a>
+        <a href="#about"   class="nav-link" data-en="About"   data-gr="Σχετικά">About</a>
+        <a href="#contact" class="nav-link" data-en="Contact" data-gr="Επικοινωνία">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <!-- Language toggle -->
+        <div class="flex items-center gap-2 text-sm">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="text-border">/</span>
+          <button class="lang-btn" data-lang="gr">GR</button>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border px-8 py-6 flex flex-col gap-6">
+      <a href="#books"   class="nav-link text-lg" data-en="Books"   data-gr="Βιβλία">Books</a>
+      <a href="#about"   class="nav-link text-lg" data-en="About"   data-gr="Σχετικά">About</a>
+      <a href="#contact" class="nav-link text-lg" data-en="Contact" data-gr="Επικοινωνία">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <main id="main">
+
+  <section id="hero" class="min-h-screen flex items-center pt-20 bg-bg">
+    <div class="hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow-2" aria-hidden="true"></div>
+    <div class="max-w-7xl mx-auto px-8 w-full py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: text -->
+      <div class="relative pl-6 border-l border-border reveal">
+        <p class="eyebrow mb-6" data-en="Author · Writer · Essayist" data-gr="Συγγραφέας · Δοκιμιογράφος · Αρθρογράφος">
+          Author · Writer · Essayist
+        </p>
+
+        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
+          <span class="italic" data-en="Stories that stay" data-gr="Ιστορίες που μένουν">Stories that stay</span><br />
+          <span data-en="with you." data-gr="μαζί σου.">with you.</span>
+        </h1>
+
+        <p class="text-muted text-lg leading-relaxed max-w-md mb-12" data-en="Three books. One voice. Somewhere between silence and the weight of memory." data-gr="Τρία βιβλία. Μία φωνή. Κάπου μεταξύ σιωπής και του βάρους της μνήμης.">
+          Three books. One voice. Somewhere between silence and the weight of memory.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#books" class="btn-primary" data-en="Browse Books" data-gr="Δείτε τα Βιβλία">Browse Books</a>
+          <a href="#about" class="btn-ghost"   data-en="About the Author" data-gr="Για τον Συγγραφέα">About the Author</a>
+        </div>
+      </div>
+
+      <!-- Right: book cover mockups -->
+      <div class="hidden lg:flex items-end justify-center gap-4 h-80 relative reveal reveal-delay-1">
+        <div class="book-mockup book-mockup--1">
+          <div class="book-cover">
+            <div class="accent-line"></div>
+            <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">The Weight<br/>of Silence</p>
+            <p class="author-label">Derek</p>
+          </div>
+        </div>
+        <div class="book-mockup book-mockup--2">
+          <div class="book-cover book-cover--2">
+            <div class="accent-line accent-line--2"></div>
+            <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">Letters to<br/>No One</p>
+            <p class="author-label">Derek</p>
+          </div>
+        </div>
+        <div class="book-mockup book-mockup--3">
+          <div class="book-cover book-cover--3">
+            <div class="accent-line accent-line--3"></div>
+            <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">Before the<br/>Light Fades</p>
+            <p class="author-label">Derek</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       BOOKS SECTION
+  ══════════════════════════════════════════ -->
+  <section id="books" class="py-28 bg-bg">
+    <div class="max-w-7xl mx-auto px-8">
+
+      <div class="mb-16 reveal">
+        <p class="eyebrow mb-4" data-en="Books" data-gr="Βιβλία">Books</p>
+        <h2 class="section-title" data-en="Available Now" data-gr="Διαθέσιμα Τώρα">Available Now</h2>
+        <p class="text-muted text-base max-w-xl mt-4" data-en="Three works spanning literary fiction, essays, and short stories." data-gr="Τρία έργα που εκτείνονται σε λογοτεχνική πεζογραφία, δοκίμια και διηγήματα.">
+          Three works spanning literary fiction, essays, and short stories.
+        </p>
+      </div>
+
+      <!-- Book cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+        <!-- Book 1 -->
+        <div class="book-card group reveal" data-book="1">
+          <div class="book-card-cover relative">
+            <!-- Replace with actual cover image: <img src="assets/images/book-cover-1.jpg" alt="The Weight of Silence" class="w-full h-full object-cover" /> -->
+            <div class="cover-placeholder">
+              <div class="accent-line ml-6 mt-10"></div>
+              <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">The Weight<br/>of Silence</p>
+              <p class="author-label ml-6">Derek</p>
+            </div>
+            <div class="price-badge">€9.99</div>
+          </div>
+          <div class="book-card-body">
+            <p class="genre-label" data-en="Literary Fiction" data-gr="Λογοτεχνική Πεζογραφία">Literary Fiction</p>
+            <h3 class="book-title font-serif italic" data-en="The Weight of Silence" data-gr="Το Βάρος της Σιωπής">The Weight of Silence</h3>
+            <p class="book-desc text-muted text-sm leading-relaxed" data-en="A meditation on loss, memory, and the spaces between words. Set across three generations of a Greek family." data-gr="Ένας στοχασμός για την απώλεια, τη μνήμη και τα κενά ανάμεσα στις λέξεις. Σε τρεις γενιές μιας ελληνικής οικογένειας.">
+              A meditation on loss, memory, and the spaces between words. Set across three generations of a Greek family.
+            </p>
+            <!-- REPLACE href with your Lemon Squeezy product URL -->
+            <a href="YOUR_LS_PRODUCT_URL_1" class="lemonsqueezy-button buy-btn" data-en="Buy Now — €9.99" data-gr="Αγορά — €9.99">
+              Buy Now — €9.99
+            </a>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card group reveal reveal-delay-1" data-book="2">
+          <div class="book-card-cover relative">
+            <div class="cover-placeholder">
+              <div class="accent-line ml-6 mt-10"></div>
+              <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">Letters to<br/>No One</p>
+              <p class="author-label ml-6">Derek</p>
+            </div>
+            <div class="price-badge">€11.99</div>
+          </div>
+          <div class="book-card-body">
+            <p class="genre-label" data-en="Essays" data-gr="Δοκίμια">Essays</p>
+            <h3 class="book-title font-serif italic" data-en="Letters to No One" data-gr="Γράμματα σε Κανέναν">Letters to No One</h3>
+            <p class="book-desc text-muted text-sm leading-relaxed" data-en="Personal essays on language, identity, and the act of writing. For those who think between languages." data-gr="Προσωπικά δοκίμια για τη γλώσσα, την ταυτότητα και τη γραφή. Για όσους σκέφτονται ανάμεσα σε γλώσσες.">
+              Personal essays on language, identity, and the act of writing. For those who think between languages.
+            </p>
+            <!-- REPLACE href with your Lemon Squeezy product URL -->
+            <a href="YOUR_LS_PRODUCT_URL_2" class="lemonsqueezy-button buy-btn" data-en="Buy Now — €11.99" data-gr="Αγορά — €11.99">
+              Buy Now — €11.99
+            </a>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card group reveal reveal-delay-2" data-book="3">
+          <div class="book-card-cover relative">
+            <div class="cover-placeholder">
+              <div class="accent-line ml-6 mt-10"></div>
+              <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">Before the<br/>Light Fades</p>
+              <p class="author-label ml-6">Derek</p>
+            </div>
+            <div class="price-badge">€8.99</div>
+          </div>
+          <div class="book-card-body">
+            <p class="genre-label" data-en="Short Stories" data-gr="Διηγήματα">Short Stories</p>
+            <h3 class="book-title font-serif italic" data-en="Before the Light Fades" data-gr="Πριν Σβήσει το Φως">Before the Light Fades</h3>
+            <p class="book-desc text-muted text-sm leading-relaxed" data-en="Fourteen stories from the margins of ordinary life. Each one a world compressed to its essential truth." data-gr="Δεκατέσσερα διηγήματα από τα περιθώρια της καθημερινής ζωής. Το καθένα ένας κόσμος συμπιεσμένος στην ουσιαστική του αλήθεια.">
+              Fourteen stories from the margins of ordinary life. Each one a world compressed to its essential truth.
+            </p>
+            <!-- REPLACE href with your Lemon Squeezy product URL -->
+            <a href="YOUR_LS_PRODUCT_URL_3" class="lemonsqueezy-button buy-btn" data-en="Buy Now — €8.99" data-gr="Αγορά — €8.99">
+              Buy Now — €8.99
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bundle card -->
+      <div class="bundle-card reveal reveal-delay-3">
+        <div class="bundle-accent-bar"></div>
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pl-8">
+          <div>
+            <h3 class="font-serif italic text-2xl md:text-3xl text-text mb-1" data-en="Complete Collection" data-gr="Πλήρης Συλλογή">Complete Collection</h3>
+            <p class="text-muted text-sm" data-en="All three books · Best value · Save 20%" data-gr="Και τα τρία βιβλία · Καλύτερη αξία · Εξοικονομήστε 20%">
+              All three books · Best value · Save 20%
+            </p>
+          </div>
+          <!-- REPLACE href with your Lemon Squeezy bundle URL -->
+          <a href="YOUR_LS_BUNDLE_URL" class="lemonsqueezy-button bundle-btn" data-en="€24.99 — Get the Bundle" data-gr="€24.99 — Αποκτήστε τη Συλλογή">
+            €24.99 — Get the Bundle
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════ -->
+  <section id="about" class="py-28 bg-[#0F0D0B]">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+      <!-- Photo -->
+      <div class="relative reveal">
+        <div class="aspect-[3/4] max-w-sm bg-surf2 rounded overflow-hidden flex items-center justify-center">
+          <!-- Replace with: <img src="assets/images/author-photo.jpg" alt="Derek" class="w-full h-full object-cover" /> -->
+          <p class="text-muted text-sm tracking-widest uppercase">Author Photo</p>
+        </div>
+        <div class="absolute -bottom-4 -right-4 w-24 h-24 border border-accent opacity-30 rounded"></div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal reveal-delay-1">
+        <p class="eyebrow mb-6" data-en="About" data-gr="Σχετικά">About</p>
+
+        <blockquote class="font-serif italic text-2xl md:text-3xl text-text leading-snug mb-8" data-en='"Writing is the act of listening carefully."' data-gr='"Η γραφή είναι η πράξη της προσεκτικής ακρόασης."'>
+          "Writing is the act of listening carefully."
+        </blockquote>
+
+        <p class="text-muted leading-relaxed mb-5" data-en="Derek is a writer working at the intersection of memory, language, and identity. His work has appeared in literary journals across Europe, and he writes equally in English and Greek." data-gr="Ο Derek είναι συγγραφέας που εργάζεται στη διασταύρωση μνήμης, γλώσσας και ταυτότητας. Το έργο του έχει εμφανιστεί σε λογοτεχνικά περιοδικά σε όλη την Ευρώπη, και γράφει εξίσου στα Αγγλικά και τα Ελληνικά.">
+          Derek is a writer working at the intersection of memory, language, and identity. His work has appeared in literary journals across Europe, and he writes equally in English and Greek.
+        </p>
+
+        <p class="text-muted leading-relaxed mb-12" data-en="His essays explore what it means to inhabit two languages, and his fiction finds the extraordinary within the ordinary rhythms of Mediterranean life." data-gr="Τα δοκίμιά του εξερευνούν τι σημαίνει να κατοικείς σε δύο γλώσσες, και η πεζογραφία του ανακαλύπτει το εξαιρετικό μέσα στους συνηθισμένους ρυθμούς της μεσογειακής ζωής.">
+          His essays explore what it means to inhabit two languages, and his fiction finds the extraordinary within the ordinary rhythms of Mediterranean life.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex gap-12 border-t border-border pt-8">
+          <div>
+            <span class="stat-number" data-target="3">3</span>
+            <p class="text-muted text-xs tracking-widest uppercase" data-en="Books" data-gr="Βιβλία">Books</p>
+          </div>
+          <div>
+            <span class="stat-number" data-target="4000" data-suffix="+">4,000+</span>
+            <p class="text-muted text-xs tracking-widest uppercase" data-en="Readers" data-gr="Αναγνώστες">Readers</p>
+          </div>
+          <div>
+            <span class="stat-number" data-target="12">12</span>
+            <p class="text-muted text-xs tracking-widest uppercase" data-en="Countries" data-gr="Χώρες">Countries</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════ -->
+  <section id="contact" class="py-28 bg-bg">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+
+      <!-- Left -->
+      <div class="reveal">
+        <p class="eyebrow mb-4" data-en="Contact" data-gr="Επικοινωνία">Contact</p>
+        <h2 class="section-title mb-6" data-en="Get in Touch" data-gr="Επικοινωνήστε">Get in Touch</h2>
+        <p class="text-muted leading-relaxed mb-8 max-w-sm" data-en="For press inquiries, speaking events, or reader messages." data-gr="Για δημοσιογραφικές ερωτήσεις, ομιλίες ή μηνύματα αναγνωστών.">
+          For press inquiries, speaking events, or reader messages.
+        </p>
+
+        <a href="mailto:hello@derek.com" class="block text-accent text-sm mb-6 hover:underline">hello@derek.com</a>
+
+        <div class="flex gap-5">
+          <!-- Replace # with actual social URLs -->
+          <a href="#" class="social-link" data-en="Instagram" data-gr="Instagram">Instagram</a>
+          <span class="text-border">·</span>
+          <a href="#" class="social-link" data-en="Goodreads" data-gr="Goodreads">Goodreads</a>
+          <span class="text-border">·</span>
+          <a href="#" class="social-link" data-en="Substack" data-gr="Substack">Substack</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="contact-form" action="YOUR_FORMSPREE_URL" method="POST" class="contact-form reveal reveal-delay-1">
+        <div class="form-group">
+          <label for="name" data-en="Name" data-gr="Όνομα">Name</label>
+          <input type="text" id="name" name="name" required placeholder="" />
+        </div>
+        <div class="form-group">
+          <label for="email" data-en="Email" data-gr="Email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="" />
+        </div>
+        <div class="form-group">
+          <label for="message" data-en="Message" data-gr="Μήνυμα">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder=""></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full justify-center" data-en="Send Message" data-gr="Αποστολή Μηνύματος">
+          Send Message
+        </button>
+        <p id="form-success" class="hidden text-accent text-sm text-center mt-4" data-en="Thank you! Your message has been sent." data-gr="Ευχαριστώ! Το μήνυμά σας στάλθηκε.">
+          Thank you! Your message has been sent.
+        </p>
+      </form>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="bg-surface border-t border-border py-10">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <p class="font-serif font-bold text-lg text-text mb-1">Derek</p>
+        <p class="text-muted text-xs" data-en="© 2024 Derek. All rights reserved." data-gr="© 2024 Derek. Όλα τα δικαιώματα διατηρούνται.">
+          © 2024 Derek. All rights reserved.
+        </p>
+      </div>
+      <div class="flex gap-6 text-xs text-muted">
+        <a href="privacy.html" class="hover:text-accent transition-colors" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a>
+        <a href="terms.html"   class="hover:text-accent transition-colors" data-en="Terms & Conditions" data-gr="Όροι &amp; Προϋποθέσεις">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

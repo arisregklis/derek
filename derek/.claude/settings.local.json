@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pandoc \"C:\\\\Users\\\\dregk\\\\Downloads\\\\Project Structure for website and lemon squeezy.docx\" -t markdown)",
+      "Read(//c/Users/dregk/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/83270361-9839-424a-b2f2-a770e829067b/e3cc55b2-dbb3-4ba2-aac5-669ebe487434/skills/docx/**)",
+      "Bash(python scripts/office/unpack.py \"C:\\\\Users\\\\dregk\\\\Downloads\\\\Project Structure for website and lemon squeezy.docx\" \"C:\\\\Users\\\\dregk\\\\AppData\\\\Local\\\\Temp\\\\docx_unpacked\")",
+      "Bash(pip install *)"
+    ]
+  }
+}
