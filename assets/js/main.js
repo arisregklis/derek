@@ -35,10 +35,8 @@ function initNavbar() {
   function update() {
     const scrollY = window.scrollY;
 
-    // Scrolled class
     navbar.classList.toggle('scrolled', scrollY > 40);
 
-    // Scrollspy — find the section currently in view
     let current = '';
     sections.forEach(section => {
       if (scrollY >= section.offsetTop - 120) current = '#' + section.id;
@@ -145,18 +143,16 @@ function initIntro() {
     return;
   }
 
-  // Show once per week
-  const KEY  = 'derek-intro-ts';
-  const WEEK = 7 * 24 * 60 * 60 * 1000;
-  const last = localStorage.getItem(KEY);
-  if (last && Date.now() - parseInt(last, 10) < WEEK) {
+  // Show once per browser session (new tab = show again, refresh = skip)
+  const KEY = 'derek-intro-seen';
+  if (sessionStorage.getItem(KEY)) {
     el.classList.add('is-gone');
     return;
   }
 
   document.body.style.overflow = 'hidden';
 
-  const QUOTE      = '“Writing is the act of listening carefully.”';
+  const QUOTE      = '"Writing is the act of listening carefully."';
   const TYPE_SPEED = 42;
   const HOLD_MS    = 2400;
 
@@ -214,7 +210,7 @@ function initIntro() {
     if (dismissed) return;
     dismissed = true;
     running = false;
-    localStorage.setItem(KEY, String(Date.now()));
+    sessionStorage.setItem(KEY, '1');
     document.body.style.overflow = '';
     quoteEl.classList.remove('typing');
     el.classList.add('is-exiting');
