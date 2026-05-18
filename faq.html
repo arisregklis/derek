@@ -26,7 +26,7 @@
             surf2:   '#30241C',
             border:  '#4B3E33',
             text:    '#F8F2E7',
-            muted:   '#B5A795',
+            muted:   '#CFC1B0',
             accent:  '#E2B281',
           },
           fontFamily: {
@@ -49,9 +49,9 @@
        NAVIGATION
   ══════════════════════════════════════════ -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
 
-      <a href="index.html" class="font-serif font-bold text-xl text-text tracking-wide">Derek</a>
+      <a href="index.html" class="font-serif font-bold text-lg sm:text-xl text-text tracking-wide">Derek</a>
 
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10">
@@ -61,9 +61,9 @@
         <a href="index.html#contact" class="nav-link" data-en="Contact" data-gr="Επικοινωνία">Contact</a>
       </div>
 
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-3 sm:gap-6">
         <!-- Language toggle -->
-        <div class="flex items-center gap-2 text-sm">
+        <div class="flex items-center gap-1 sm:gap-2 text-sm">
           <button class="lang-btn active" data-lang="en">EN</button>
           <span class="text-border">/</span>
           <button class="lang-btn" data-lang="gr">GR</button>
@@ -79,7 +79,7 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border px-8 py-6 flex flex-col gap-6">
+    <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border px-5 py-5 flex flex-col gap-5">
       <a href="index.html#books"   class="nav-link text-lg" data-en="Books"   data-gr="Βιβλία">Books</a>
       <a href="index.html#about"   class="nav-link text-lg" data-en="About"   data-gr="Σχετικά">About</a>
       <a href="faq.html"           class="nav-link text-lg active" data-en="Q&amp;A" data-gr="Ερωτήσεις">Q&amp;A</a>
@@ -90,11 +90,11 @@
   <!-- ══════════════════════════════════════════
        FAQ
   ══════════════════════════════════════════ -->
-  <main id="main" class="pt-32 pb-28">
+  <main id="main" class="pt-24 sm:pt-32 pb-20 sm:pb-28">
     <section id="faq" class="bg-bg">
-      <div class="max-w-3xl mx-auto px-8">
+      <div class="max-w-3xl mx-auto px-5 sm:px-8">
 
-        <div class="mb-14 reveal">
+        <div class="mb-10 sm:mb-14 reveal">
           <p class="eyebrow mb-4" data-en="Q&amp;A" data-gr="Ερωτήσεις">Q&amp;A</p>
           <h1 class="section-title" data-en="Frequently Asked Questions" data-gr="Συχνές Ερωτήσεις">Frequently Asked Questions</h1>
           <p class="text-muted text-base max-w-xl mt-4" data-en="Everything readers ask about formats, delivery, and how to open the files on different devices." data-gr="Όλα όσα ρωτούν οι αναγνώστες για τις μορφές, την παράδοση και τον τρόπο ανοίγματος των αρχείων σε διαφορετικές συσκευές.">
@@ -295,7 +295,7 @@
         </div>
 
         <!-- Back to contact CTA -->
-        <div class="mt-16 text-center reveal reveal-delay-2">
+        <div class="mt-12 sm:mt-16 text-center reveal reveal-delay-2">
           <p class="text-muted mb-5" data-en="Still didn&rsquo;t find your answer?" data-gr="Δεν βρήκατε την απάντησή σας;">
             Still didn&rsquo;t find your answer?
           </p>
@@ -309,15 +309,15 @@
   <!-- ══════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
-  <footer class="bg-surface border-t border-border py-10">
-    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+  <footer class="bg-surface border-t border-border py-8 sm:py-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
       <div>
         <p class="font-serif font-bold text-lg text-text mb-1">Derek</p>
         <p class="text-muted text-xs" data-en="© 2024 Derek. All rights reserved." data-gr="© 2024 Derek. Όλα τα δικαιώματα διατηρούνται.">
           © 2024 Derek. All rights reserved.
         </p>
       </div>
-      <div class="flex gap-6 text-xs text-muted">
+      <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
         <a href="privacy.html" class="hover:text-accent transition-colors" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a>
         <a href="terms.html"   class="hover:text-accent transition-colors" data-en="Terms &amp; Conditions" data-gr="Όροι &amp; Προϋποθέσεις">Terms &amp; Conditions</a>
       </div>

@@ -30,7 +30,7 @@
             surf2:   '#3A1E2A',
             border:  '#5A3848',
             text:    '#F5E9D7',
-            muted:   '#C2A99A',
+            muted:   '#D4BFB0',
             accent:  '#D4AF37',
             rust:    '#8B3A1F',
           },
@@ -43,7 +43,7 @@
     };
   </script>
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=11-mobile-hero-zero" />
 </head>
 
 <body class="bg-bg text-text font-sans antialiased">
@@ -120,29 +120,59 @@
   ══════════════════════════════════════════ -->
   <main id="main">
 
-  <section id="hero" class="min-h-screen flex items-center pt-16 sm:pt-20 bg-bg">
+  <section id="hero" class="pt-16 lg:pt-20 lg:min-h-screen lg:flex lg:items-center bg-bg">
     <div class="hero-glow-1" aria-hidden="true"></div>
     <div class="hero-glow-2" aria-hidden="true"></div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full py-14 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full pt-2 pb-8 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-      <!-- Left: text -->
-      <div class="relative pl-5 sm:pl-6 border-l border-border reveal">
-        <p class="eyebrow mb-5 sm:mb-6" data-en="Author · Writer · Essayist" data-gr="Συγγραφέας · Δοκιμιογράφος · Αρθρογράφος">
+      <!-- Left: text (centered + dramatic on mobile, side-aligned on desktop) -->
+      <div class="hero-text relative reveal">
+        <!-- Mobile-only fanned book stack above the headline -->
+        <div class="hero-books-mobile lg:hidden" aria-hidden="true">
+          <div class="hero-book hero-book--a">
+            <span class="hero-book-line"></span>
+            <span class="hero-book-title">The Weight<br/>of Silence</span>
+            <span class="hero-book-seal">D</span>
+          </div>
+          <div class="hero-book hero-book--b">
+            <span class="hero-book-line"></span>
+            <span class="hero-book-title">Letters to<br/>No One</span>
+            <span class="hero-book-seal">D</span>
+          </div>
+          <div class="hero-book hero-book--c">
+            <span class="hero-book-line"></span>
+            <span class="hero-book-title">Before the<br/>Light Fades</span>
+            <span class="hero-book-seal">D</span>
+          </div>
+        </div>
+
+        <p class="eyebrow eyebrow--centered mb-5 sm:mb-6" data-en="Author · Writer · Essayist" data-gr="Συγγραφέας · Δοκιμιογράφος">
           Author · Writer · Essayist
         </p>
 
-        <h1 class="font-serif text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6 sm:mb-8">
-          <span class="italic" data-en="Stories that stay" data-gr="Ιστορίες που μένουν">Stories that stay</span><br />
-          <span data-en="with you." data-gr="μαζί σου.">with you.</span>
+        <h1 class="font-serif hero-title leading-[1.05] mb-6 sm:mb-8">
+          <span class="italic" data-en="Stories that stay" data-gr="Ιστορίες">Stories that stay</span><br />
+          <span data-en="with you." data-gr="που μένουν.">with you.</span>
         </h1>
 
-        <p class="text-muted text-base sm:text-lg leading-relaxed max-w-md mb-8 sm:mb-12" data-en="Three books. One voice. Somewhere between silence and the weight of memory." data-gr="Τρία βιβλία. Μία φωνή. Κάπου μεταξύ σιωπής και του βάρους της μνήμης.">
+        <!-- Mobile-only gold ornament between title and body -->
+        <div class="hero-flourish lg:hidden" aria-hidden="true">
+          <span></span><em>&#10086;</em><span></span>
+        </div>
+
+        <p class="hero-lede text-muted text-base sm:text-lg leading-relaxed mb-8 sm:mb-12" data-en="Three books. One voice. Somewhere between silence and the weight of memory." data-gr="Τρία βιβλία. Μία φωνή. Κάπου μεταξύ σιωπής και του βάρους της μνήμης.">
           Three books. One voice. Somewhere between silence and the weight of memory.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <div class="hero-cta flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a href="#books" class="btn-primary w-full sm:w-auto" data-en="Browse Books" data-gr="Δείτε τα Βιβλία">Browse Books</a>
           <a href="#about" class="btn-ghost w-full sm:w-auto"   data-en="About the Author" data-gr="Για τον Συγγραφέα">About the Author</a>
+        </div>
+
+        <!-- Mobile-only scroll cue -->
+        <div class="hero-scroll-cue lg:hidden" aria-hidden="true">
+          <span></span>
+          <small data-en="Scroll" data-gr="Κύλιση">Scroll</small>
         </div>
       </div>
 
