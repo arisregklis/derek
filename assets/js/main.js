@@ -192,7 +192,7 @@ function initIntro() {
     pts.forEach(p => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201,168,108,${p.alpha})`;
+      ctx.fillStyle = `rgba(212,175,55,${p.alpha})`;
       ctx.fill();
       p.x += p.vx;
       p.y += p.vy;
@@ -291,7 +291,7 @@ function initParticles() {
     pts.forEach(p => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201,168,108,${p.alpha})`;
+      ctx.fillStyle = `rgba(212,175,55,${p.alpha})`;
       ctx.fill();
       p.x += p.vx;
       p.y += p.vy;
@@ -330,6 +330,7 @@ function initCountUp() {
         const n = Math.round(v * target);
         el.textContent = (n >= 1000 ? n.toLocaleString() : n) + suffix;
         if (p < 1) requestAnimationFrame(tick);
+        else el.classList.add('counted');
       })(t0);
 
       obs.unobserve(el);
@@ -361,6 +362,68 @@ function initCardTilt() {
   });
 }
 
+// ── Magnetic buttons (pull toward cursor) ─────────────
+function initMagneticButtons() {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll(
+    '.btn-primary:not([type="submit"]), .bundle-btn'
+  );
+  targets.forEach(btn => {
+    btn.style.transition = 'transform 0.4s cubic-bezier(0.22,1,0.36,1)';
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width  / 2) * 0.28;
+      const y = (e.clientY - r.top  - r.height / 2) * 0.42;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+}
+
+// ── Mouse parallax on hero book mockups ───────────────
+function initBookParallax() {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const hero   = document.getElementById('hero');
+  const books  = document.querySelectorAll('.book-mockup');
+  if (!hero || !books.length) return;
+
+  let raf = 0, tx = 0, ty = 0;
+  hero.addEventListener('mousemove', e => {
+    const r = hero.getBoundingClientRect();
+    tx = ((e.clientX - r.left) / r.width  - 0.5) * 2;  // -1..1
+    ty = ((e.clientY - r.top)  / r.height - 0.5) * 2;
+    if (!raf) raf = requestAnimationFrame(apply);
+  });
+  hero.addEventListener('mouseleave', () => {
+    tx = 0; ty = 0;
+    if (!raf) raf = requestAnimationFrame(apply);
+  });
+
+  function apply() {
+    raf = 0;
+    books.forEach((b, i) => {
+      const depth = [10, 18, 12][i] || 10;
+      b.style.setProperty('--parallax-x', `${tx * depth}px`);
+      b.style.setProperty('--parallax-y', `${ty * depth * 0.6}px`);
+    });
+  }
+}
+
+// ── FAQ accordion ──────────────────────────────────────
+function initFaq() {
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+}
+
 // ── Init ───────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('preferred-lang') || 'en';
@@ -380,4 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initCountUp();
   initCardTilt();
+  initBookParallax();
+  initMagneticButtons();
+  initFaq();
 });
