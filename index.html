@@ -25,13 +25,14 @@
       theme: {
         extend: {
           colors: {
-            bg:      '#0D0B09',
-            surface: '#161210',
-            surf2:   '#1E1A16',
-            border:  '#2A2520',
-            text:    '#F0EBE3',
-            muted:   '#7A7068',
-            accent:  '#C9A86C',
+            bg:      '#1F0F14',
+            surface: '#2A1620',
+            surf2:   '#3A1E2A',
+            border:  '#5A3848',
+            text:    '#F5E9D7',
+            muted:   '#C2A99A',
+            accent:  '#D4AF37',
+            rust:    '#8B3A1F',
           },
           fontFamily: {
             serif: ['"Playfair Display"', 'Georgia', 'serif'],
@@ -76,20 +77,21 @@
        NAVIGATION
   ══════════════════════════════════════════ -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
 
-      <a href="#" class="font-serif font-bold text-xl text-text tracking-wide">Derek</a>
+      <a href="#" class="font-serif font-bold text-lg sm:text-xl text-text tracking-wide">Derek</a>
 
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-10">
         <a href="#books"   class="nav-link" data-en="Books"   data-gr="Βιβλία">Books</a>
         <a href="#about"   class="nav-link" data-en="About"   data-gr="Σχετικά">About</a>
+        <a href="faq.html" class="nav-link" data-en="Q&amp;A"   data-gr="Ερωτήσεις">Q&amp;A</a>
         <a href="#contact" class="nav-link" data-en="Contact" data-gr="Επικοινωνία">Contact</a>
       </div>
 
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-3 sm:gap-6">
         <!-- Language toggle -->
-        <div class="flex items-center gap-2 text-sm">
+        <div class="flex items-center gap-1 sm:gap-2 text-sm">
           <button class="lang-btn active" data-lang="en">EN</button>
           <span class="text-border">/</span>
           <button class="lang-btn" data-lang="gr">GR</button>
@@ -105,9 +107,10 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border px-8 py-6 flex flex-col gap-6">
+    <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border px-5 py-5 flex flex-col gap-5">
       <a href="#books"   class="nav-link text-lg" data-en="Books"   data-gr="Βιβλία">Books</a>
       <a href="#about"   class="nav-link text-lg" data-en="About"   data-gr="Σχετικά">About</a>
+      <a href="faq.html" class="nav-link text-lg" data-en="Q&amp;A"   data-gr="Ερωτήσεις">Q&amp;A</a>
       <a href="#contact" class="nav-link text-lg" data-en="Contact" data-gr="Επικοινωνία">Contact</a>
     </div>
   </nav>
@@ -117,29 +120,29 @@
   ══════════════════════════════════════════ -->
   <main id="main">
 
-  <section id="hero" class="min-h-screen flex items-center pt-20 bg-bg">
+  <section id="hero" class="min-h-screen flex items-center pt-16 sm:pt-20 bg-bg">
     <div class="hero-glow-1" aria-hidden="true"></div>
     <div class="hero-glow-2" aria-hidden="true"></div>
-    <div class="max-w-7xl mx-auto px-8 w-full py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full py-14 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
       <!-- Left: text -->
-      <div class="relative pl-6 border-l border-border reveal">
-        <p class="eyebrow mb-6" data-en="Author · Writer · Essayist" data-gr="Συγγραφέας · Δοκιμιογράφος · Αρθρογράφος">
+      <div class="relative pl-5 sm:pl-6 border-l border-border reveal">
+        <p class="eyebrow mb-5 sm:mb-6" data-en="Author · Writer · Essayist" data-gr="Συγγραφέας · Δοκιμιογράφος · Αρθρογράφος">
           Author · Writer · Essayist
         </p>
 
-        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
+        <h1 class="font-serif text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6 sm:mb-8">
           <span class="italic" data-en="Stories that stay" data-gr="Ιστορίες που μένουν">Stories that stay</span><br />
           <span data-en="with you." data-gr="μαζί σου.">with you.</span>
         </h1>
 
-        <p class="text-muted text-lg leading-relaxed max-w-md mb-12" data-en="Three books. One voice. Somewhere between silence and the weight of memory." data-gr="Τρία βιβλία. Μία φωνή. Κάπου μεταξύ σιωπής και του βάρους της μνήμης.">
+        <p class="text-muted text-base sm:text-lg leading-relaxed max-w-md mb-8 sm:mb-12" data-en="Three books. One voice. Somewhere between silence and the weight of memory." data-gr="Τρία βιβλία. Μία φωνή. Κάπου μεταξύ σιωπής και του βάρους της μνήμης.">
           Three books. One voice. Somewhere between silence and the weight of memory.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#books" class="btn-primary" data-en="Browse Books" data-gr="Δείτε τα Βιβλία">Browse Books</a>
-          <a href="#about" class="btn-ghost"   data-en="About the Author" data-gr="Για τον Συγγραφέα">About the Author</a>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <a href="#books" class="btn-primary w-full sm:w-auto" data-en="Browse Books" data-gr="Δείτε τα Βιβλία">Browse Books</a>
+          <a href="#about" class="btn-ghost w-full sm:w-auto"   data-en="About the Author" data-gr="Για τον Συγγραφέα">About the Author</a>
         </div>
       </div>
 
@@ -150,6 +153,7 @@
             <div class="accent-line"></div>
             <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">The Weight<br/>of Silence</p>
             <p class="author-label">Derek</p>
+            <span class="wax-seal" aria-hidden="true">D</span>
           </div>
         </div>
         <div class="book-mockup book-mockup--2">
@@ -157,6 +161,7 @@
             <div class="accent-line accent-line--2"></div>
             <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">Letters to<br/>No One</p>
             <p class="author-label">Derek</p>
+            <span class="wax-seal" aria-hidden="true">D</span>
           </div>
         </div>
         <div class="book-mockup book-mockup--3">
@@ -164,6 +169,7 @@
             <div class="accent-line accent-line--3"></div>
             <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">Before the<br/>Light Fades</p>
             <p class="author-label">Derek</p>
+            <span class="wax-seal" aria-hidden="true">D</span>
           </div>
         </div>
       </div>
@@ -174,10 +180,17 @@
   <!-- ══════════════════════════════════════════
        BOOKS SECTION
   ══════════════════════════════════════════ -->
-  <section id="books" class="py-28 bg-bg">
-    <div class="max-w-7xl mx-auto px-8">
+  <section id="books" class="py-20 sm:py-28 bg-bg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
 
-      <div class="mb-16 reveal">
+      <div class="ornament-divider reveal" aria-hidden="true">
+        <span class="ornament-line"></span>
+        <span class="ornament-glyph">&#10086;</span>
+        <span class="ornament-line"></span>
+      </div>
+
+      <div class="mb-12 sm:mb-16 reveal">
+        <span class="section-numeral">I.</span>
         <p class="eyebrow mb-4" data-en="Books" data-gr="Βιβλία">Books</p>
         <h2 class="section-title" data-en="Available Now" data-gr="Διαθέσιμα Τώρα">Available Now</h2>
         <p class="text-muted text-base max-w-xl mt-4" data-en="Three works spanning literary fiction, essays, and short stories." data-gr="Τρία έργα που εκτείνονται σε λογοτεχνική πεζογραφία, δοκίμια και διηγήματα.">
@@ -186,7 +199,7 @@
       </div>
 
       <!-- Book cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
 
         <!-- Book 1 -->
         <div class="book-card group reveal" data-book="1">
@@ -197,6 +210,7 @@
               <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">The Weight<br/>of Silence</p>
               <p class="author-label ml-6">Derek</p>
             </div>
+            <span class="wax-seal" aria-hidden="true">D</span>
             <div class="price-badge">€9.99</div>
           </div>
           <div class="book-card-body">
@@ -220,6 +234,7 @@
               <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">Letters to<br/>No One</p>
               <p class="author-label ml-6">Derek</p>
             </div>
+            <span class="wax-seal" aria-hidden="true">D</span>
             <div class="price-badge">€11.99</div>
           </div>
           <div class="book-card-body">
@@ -243,6 +258,7 @@
               <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">Before the<br/>Light Fades</p>
               <p class="author-label ml-6">Derek</p>
             </div>
+            <span class="wax-seal" aria-hidden="true">D</span>
             <div class="price-badge">€8.99</div>
           </div>
           <div class="book-card-body">
@@ -263,7 +279,7 @@
       <!-- Bundle card -->
       <div class="bundle-card reveal reveal-delay-3">
         <div class="bundle-accent-bar"></div>
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pl-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 pl-6 sm:pl-8">
           <div>
             <h3 class="font-serif italic text-2xl md:text-3xl text-text mb-1" data-en="Complete Collection" data-gr="Πλήρης Συλλογή">Complete Collection</h3>
             <p class="text-muted text-sm" data-en="All three books · Best value · Save 20%" data-gr="Και τα τρία βιβλία · Καλύτερη αξία · Εξοικονομήστε 20%">
@@ -281,38 +297,111 @@
   </section>
 
   <!-- ══════════════════════════════════════════
+       PRAISE / PRESS QUOTES
+  ══════════════════════════════════════════ -->
+  <section id="praise">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+      <div class="mb-10 sm:mb-14 reveal">
+        <span class="section-numeral">II.</span>
+        <p class="eyebrow mb-4" data-en="Praise" data-gr="Κριτικές">Praise</p>
+        <h2 class="section-title" data-en="What Readers Say" data-gr="Τι Λένε οι Αναγνώστες">What Readers Say</h2>
+      </div>
+
+      <div class="press-grid">
+        <article class="press-card reveal">
+          <p class="press-quote" data-en="A quiet, devastating voice. Derek writes the way silence sounds at three in the morning." data-gr="Μια ήσυχη, συγκλονιστική φωνή. Ο Derek γράφει όπως ακούγεται η σιωπή στις τρεις τα ξημερώματα.">
+            A quiet, devastating voice. Derek writes the way silence sounds at three in the morning.
+          </p>
+          <p class="press-source">
+            <span data-en="Mariana Telis · Athens Review of Books" data-gr="Μαριάννα Τελή · Athens Review of Books">Mariana Telis · Athens Review of Books</span>
+          </p>
+        </article>
+
+        <article class="press-card reveal reveal-delay-1">
+          <p class="press-quote" data-en="Few writers move between languages with this much grace. Each page rewards a second reading." data-gr="Λίγοι συγγραφείς κινούνται ανάμεσα σε γλώσσες με τόση χάρη. Κάθε σελίδα ανταμείβει μια δεύτερη ανάγνωση.">
+            Few writers move between languages with this much grace. Each page rewards a second reading.
+          </p>
+          <p class="press-source">
+            <span data-en="The Mediterranean Quarterly" data-gr="The Mediterranean Quarterly">The Mediterranean Quarterly</span>
+          </p>
+        </article>
+
+        <article class="press-card reveal reveal-delay-2">
+          <p class="press-quote" data-en="Memory, exile, the texture of an ordinary afternoon — Derek finds the extraordinary inside all of it." data-gr="Μνήμη, εξορία, η υφή ενός συνηθισμένου απογεύματος — ο Derek βρίσκει το εξαιρετικό μέσα σε όλα αυτά.">
+            Memory, exile, the texture of an ordinary afternoon — Derek finds the extraordinary inside all of it.
+          </p>
+          <p class="press-source">
+            <span data-en="Lefteris Pavlou · Kathimerini Books" data-gr="Λευτέρης Παύλου · Καθημερινή Βιβλία">Lefteris Pavlou · Kathimerini Books</span>
+          </p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       MARQUEE BAND
+  ══════════════════════════════════════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span data-en="Literary Fiction" data-gr="Λογοτεχνική Πεζογραφία">Literary Fiction</span>
+      <span data-en="Essays" data-gr="Δοκίμια">Essays</span>
+      <span data-en="Short Stories" data-gr="Διηγήματα">Short Stories</span>
+      <span data-en="Memory" data-gr="Μνήμη">Memory</span>
+      <span data-en="Language" data-gr="Γλώσσα">Language</span>
+      <span data-en="Identity" data-gr="Ταυτότητα">Identity</span>
+      <span data-en="Silence" data-gr="Σιωπή">Silence</span>
+      <span data-en="The Mediterranean" data-gr="Η Μεσόγειος">The Mediterranean</span>
+      <!-- Duplicate for seamless scroll -->
+      <span data-en="Literary Fiction" data-gr="Λογοτεχνική Πεζογραφία">Literary Fiction</span>
+      <span data-en="Essays" data-gr="Δοκίμια">Essays</span>
+      <span data-en="Short Stories" data-gr="Διηγήματα">Short Stories</span>
+      <span data-en="Memory" data-gr="Μνήμη">Memory</span>
+      <span data-en="Language" data-gr="Γλώσσα">Language</span>
+      <span data-en="Identity" data-gr="Ταυτότητα">Identity</span>
+      <span data-en="Silence" data-gr="Σιωπή">Silence</span>
+      <span data-en="The Mediterranean" data-gr="Η Μεσόγειος">The Mediterranean</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
        ABOUT SECTION
   ══════════════════════════════════════════ -->
-  <section id="about" class="py-28 bg-[#0F0D0B]">
-    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+  <section id="about" class="with-corners py-20 sm:py-28 bg-[#241019]">
+    <span class="corner corner--tl" aria-hidden="true"></span>
+    <span class="corner corner--tr" aria-hidden="true"></span>
+    <span class="corner corner--bl" aria-hidden="true"></span>
+    <span class="corner corner--br" aria-hidden="true"></span>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
       <!-- Photo -->
-      <div class="relative reveal">
-        <div class="aspect-[3/4] max-w-sm bg-surf2 rounded overflow-hidden flex items-center justify-center">
-          <!-- Replace with: <img src="assets/images/author-photo.jpg" alt="Derek" class="w-full h-full object-cover" /> -->
-          <p class="text-muted text-sm tracking-widest uppercase">Author Photo</p>
+      <div class="relative reveal mx-auto lg:mx-0 w-full max-w-sm">
+        <div class="aspect-[3/4] bg-surf2 rounded overflow-hidden">
+          <img src="assets/images/author.webp" alt="Derek" class="w-full h-full object-cover" loading="lazy" />
         </div>
-        <div class="absolute -bottom-4 -right-4 w-24 h-24 border border-accent opacity-30 rounded"></div>
+        <div class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 border border-accent opacity-30 rounded"></div>
       </div>
 
       <!-- Text -->
       <div class="reveal reveal-delay-1">
-        <p class="eyebrow mb-6" data-en="About" data-gr="Σχετικά">About</p>
+        <span class="section-numeral">III.</span>
+        <p class="eyebrow mb-5 sm:mb-6" data-en="About" data-gr="Σχετικά">About</p>
 
-        <blockquote class="font-serif italic text-2xl md:text-3xl text-text leading-snug mb-8" data-en='"Writing is the act of listening carefully."' data-gr='"Η γραφή είναι η πράξη της προσεκτικής ακρόασης."'>
-          "Writing is the act of listening carefully."
+        <blockquote class="pullquote font-serif italic text-xl sm:text-2xl md:text-3xl text-text leading-snug mb-8 sm:mb-10 pl-4 sm:pl-6" data-en='Writing is the act of listening carefully.' data-gr='Η γραφή είναι η πράξη της προσεκτικής ακρόασης.'>
+          Writing is the act of listening carefully.
         </blockquote>
 
-        <p class="text-muted leading-relaxed mb-5" data-en="Derek is a writer working at the intersection of memory, language, and identity. His work has appeared in literary journals across Europe, and he writes equally in English and Greek." data-gr="Ο Derek είναι συγγραφέας που εργάζεται στη διασταύρωση μνήμης, γλώσσας και ταυτότητας. Το έργο του έχει εμφανιστεί σε λογοτεχνικά περιοδικά σε όλη την Ευρώπη, και γράφει εξίσου στα Αγγλικά και τα Ελληνικά.">
+        <p class="drop-cap text-muted leading-relaxed mb-5" data-en="Derek is a writer working at the intersection of memory, language, and identity. His work has appeared in literary journals across Europe, and he writes equally in English and Greek." data-gr="Ο Derek είναι συγγραφέας που εργάζεται στη διασταύρωση μνήμης, γλώσσας και ταυτότητας. Το έργο του έχει εμφανιστεί σε λογοτεχνικά περιοδικά σε όλη την Ευρώπη, και γράφει εξίσου στα Αγγλικά και τα Ελληνικά.">
           Derek is a writer working at the intersection of memory, language, and identity. His work has appeared in literary journals across Europe, and he writes equally in English and Greek.
         </p>
 
-        <p class="text-muted leading-relaxed mb-12" data-en="His essays explore what it means to inhabit two languages, and his fiction finds the extraordinary within the ordinary rhythms of Mediterranean life." data-gr="Τα δοκίμιά του εξερευνούν τι σημαίνει να κατοικείς σε δύο γλώσσες, και η πεζογραφία του ανακαλύπτει το εξαιρετικό μέσα στους συνηθισμένους ρυθμούς της μεσογειακής ζωής.">
+        <p class="text-muted leading-relaxed mb-10 sm:mb-12" data-en="His essays explore what it means to inhabit two languages, and his fiction finds the extraordinary within the ordinary rhythms of Mediterranean life." data-gr="Τα δοκίμιά του εξερευνούν τι σημαίνει να κατοικείς σε δύο γλώσσες, και η πεζογραφία του ανακαλύπτει το εξαιρετικό μέσα στους συνηθισμένους ρυθμούς της μεσογειακής ζωής.">
           His essays explore what it means to inhabit two languages, and his fiction finds the extraordinary within the ordinary rhythms of Mediterranean life.
         </p>
 
         <!-- Stats -->
-        <div class="flex gap-12 border-t border-border pt-8">
+        <div class="flex flex-wrap gap-x-8 gap-y-6 sm:gap-12 border-t border-border pt-8">
           <div>
             <span class="stat-number" data-target="3">3</span>
             <p class="text-muted text-xs tracking-widest uppercase" data-en="Books" data-gr="Βιβλία">Books</p>
@@ -332,22 +421,51 @@
   </section>
 
   <!-- ══════════════════════════════════════════
+       Q&A TEASER
+  ══════════════════════════════════════════ -->
+  <section id="qa" class="py-16 sm:py-20 bg-bg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <a href="faq.html" class="qa-promo reveal">
+        <div class="qa-promo-text">
+          <span class="section-numeral">IV.</span>
+          <p class="eyebrow mb-4" data-en="Q&amp;A" data-gr="Ερωτήσεις">Q&amp;A</p>
+          <h2 class="font-serif italic text-3xl md:text-4xl text-text leading-tight mb-3" data-en="Have a question?" data-gr="Έχετε μια ερώτηση;">
+            Have a question?
+          </h2>
+          <p class="text-muted text-base max-w-xl" data-en="Formats, downloads, how to read on iOS or Android — answers to the questions readers ask most." data-gr="Μορφές, λήψεις, πώς να διαβάσετε σε iOS ή Android — απαντήσεις στις πιο συχνές ερωτήσεις των αναγνωστών.">
+            Formats, downloads, how to read on iOS or Android — answers to the questions readers ask most.
+          </p>
+        </div>
+        <span class="qa-promo-cta" data-en="Read Q&amp;A →" data-gr="Διαβάστε →">Read Q&amp;A →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
        CONTACT SECTION
   ══════════════════════════════════════════ -->
-  <section id="contact" class="py-28 bg-bg">
-    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+  <section id="contact" class="py-20 sm:py-28 bg-bg">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="ornament-divider reveal" aria-hidden="true">
+        <span class="ornament-line"></span>
+        <span class="ornament-glyph">&#10086;</span>
+        <span class="ornament-line"></span>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
       <!-- Left -->
       <div class="reveal">
+        <span class="section-numeral">V.</span>
         <p class="eyebrow mb-4" data-en="Contact" data-gr="Επικοινωνία">Contact</p>
-        <h2 class="section-title mb-6" data-en="Get in Touch" data-gr="Επικοινωνήστε">Get in Touch</h2>
-        <p class="text-muted leading-relaxed mb-8 max-w-sm" data-en="For press inquiries, speaking events, or reader messages." data-gr="Για δημοσιογραφικές ερωτήσεις, ομιλίες ή μηνύματα αναγνωστών.">
+        <h2 class="section-title mb-5 sm:mb-6" data-en="Get in Touch" data-gr="Επικοινωνήστε">Get in Touch</h2>
+        <p class="text-muted leading-relaxed mb-6 sm:mb-8 max-w-sm" data-en="For press inquiries, speaking events, or reader messages." data-gr="Για δημοσιογραφικές ερωτήσεις, ομιλίες ή μηνύματα αναγνωστών.">
           For press inquiries, speaking events, or reader messages.
         </p>
 
-        <a href="mailto:hello@derek.com" class="block text-accent text-sm mb-6 hover:underline">hello@derek.com</a>
+        <a href="mailto:hello@derek.com" class="block text-accent text-sm mb-6 hover:underline break-all">hello@derek.com</a>
 
-        <div class="flex gap-5">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
           <!-- Replace # with actual social URLs -->
           <a href="#" class="social-link" data-en="Instagram" data-gr="Instagram">Instagram</a>
           <span class="text-border">·</span>
@@ -387,15 +505,15 @@
   <!-- ══════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
-  <footer class="bg-surface border-t border-border py-10">
-    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+  <footer class="bg-surface border-t border-border py-8 sm:py-10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
       <div>
         <p class="font-serif font-bold text-lg text-text mb-1">Derek</p>
         <p class="text-muted text-xs" data-en="© 2024 Derek. All rights reserved." data-gr="© 2024 Derek. Όλα τα δικαιώματα διατηρούνται.">
           © 2024 Derek. All rights reserved.
         </p>
       </div>
-      <div class="flex gap-6 text-xs text-muted">
+      <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted">
         <a href="privacy.html" class="hover:text-accent transition-colors" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a>
         <a href="terms.html"   class="hover:text-accent transition-colors" data-en="Terms & Conditions" data-gr="Όροι &amp; Προϋποθέσεις">Terms &amp; Conditions</a>
       </div>
