@@ -3,11 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Q&amp;A | Derek</title>
-  <meta name="description" content="Frequently asked questions — formats, downloads, and how to read on iOS or Android." />
-  <meta property="og:title" content="Q&A | Derek" />
+  <title>Reader Q&amp;A — Formats, Downloads &amp; Devices | Derek</title>
+  <meta name="description" content="Frequently asked questions about Derek's books — formats, downloads, Kindle, and how to read on iOS or Android. Find your answer here." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Derek" />
+  <meta name="theme-color" content="#1A1410" />
+  <!-- TODO: Update canonical/og:url when a custom domain is connected -->
+  <link rel="canonical" href="https://arisregklis.github.io/derek/faq.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Derek — Author" />
+  <meta property="og:title" content="Reader Q&amp;A — Formats, Downloads &amp; Devices | Derek" />
   <meta property="og:description" content="Answers to the most common reader questions." />
+  <meta property="og:image" content="https://arisregklis.github.io/derek/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://arisregklis.github.io/derek/faq.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="el_GR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Reader Q&amp;A — Formats, Downloads &amp; Devices | Derek" />
+  <meta name="twitter:description" content="Answers to the most common reader questions." />
+
+  <!-- Structured data: FAQPage (rich results in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What format are the books in?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each book is delivered as both a PDF and an EPUB, so you can read on virtually any device — phone, tablet, e-reader, or computer." } },
+      { "@type": "Question", "name": "How do I receive my book after I buy it?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After checkout, you'll receive a confirmation email from Lemon Squeezy with a secure download link. The link gives you access to both the PDF and EPUB versions of your purchase." } },
+      { "@type": "Question", "name": "How do I open the PDF or EPUB on my phone or tablet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "On iOS, open the downloaded file from Safari's download list or the Files app, then use 'Copy to Books' to read it in Apple Books. On Android, open the file from the notification shade or Downloads folder; PDFs open in the built-in viewer and EPUBs open in an eBook reader app such as Google Play Books." } },
+      { "@type": "Question", "name": "Are the books available in both English and Greek?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — every title is available in both languages. You can choose your preferred language at checkout." } },
+      { "@type": "Question", "name": "Can I read the books on a Kindle?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Email the EPUB to your personal 'Send to Kindle' address, or use Amazon's Send to Kindle app on phone or desktop. The book will appear in your Kindle library within a few minutes." } },
+      { "@type": "Question", "name": "Are printed copies available?",
+        "acceptedAnswer": { "@type": "Answer", "text": "At the moment all three books are released digitally only. Print editions are being considered for the future — write through the contact form to be notified when that changes." } },
+      { "@type": "Question", "name": "What is the refund policy?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Because these are digital files delivered instantly, all sales are final. If something goes wrong with your download, or you receive the wrong file, please reach out — it will always be made right." } },
+      { "@type": "Question", "name": "How can I contact you directly?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The fastest way is the contact form on the home page, or by email at hello@derek.com. Every message is read personally and answered within a few days." } }
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,12 +81,33 @@
     };
   </script>
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=15-complete" />
 </head>
 
 <body class="bg-bg text-text font-sans antialiased">
 
+  <!-- Vivid animated ambient field -->
+  <div id="aurora" aria-hidden="true">
+    <span class="aurora-blob aurora-blob--1"></span>
+    <span class="aurora-blob aurora-blob--2"></span>
+    <span class="aurora-blob aurora-blob--3"></span>
+    <span class="aurora-grain"></span>
+  </div>
+  <div id="cursor-aura" aria-hidden="true"></div>
+
   <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- FLOATING CONTROL DOCK -->
+  <div id="control-dock" aria-label="Site controls">
+    <button id="theme-toggle" class="dock-btn" aria-label="Toggle light / dark mode" title="Light / Dark">
+      <span class="dock-icon dock-icon--moon" aria-hidden="true">&#9789;</span>
+      <span class="dock-icon dock-icon--sun" aria-hidden="true">&#9728;</span>
+    </button>
+    <button id="audio-toggle" class="dock-btn" aria-label="Toggle ambient sound" aria-pressed="false" title="Ambient sound">
+      <span class="dock-icon dock-icon--note" aria-hidden="true">&#9834;</span>
+      <span class="audio-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </button>
+  </div>
 
   <!-- ══════════════════════════════════════════
        NAVIGATION
@@ -324,6 +388,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=complete-5"></script>
 </body>
 </html>
