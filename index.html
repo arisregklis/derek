@@ -3,928 +3,788 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Derek — Author of Literary Fiction, Essays &amp; Short Stories</title>
-  <meta name="description" content="Official website of author Derek — three books of literary fiction, essays, and short stories in English and Greek. Read excerpts and buy direct." />
+  <title>Derek Robotis — Four Books, One Universe | Sci-Fi &amp; Mystery Author</title>
+  <meta name="description" content="Official site of author Derek Robotis — The Tree, The Second Colony, Shadows and Deceit, and The Pyramid of Isida. Explore the worlds, read excerpts, buy the books." />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="Derek" />
-  <meta name="theme-color" content="#1F0F14" />
-  <!-- TODO: Update canonical/og:url when a custom domain is connected -->
+  <meta name="author" content="Derek Robotis" />
+  <meta name="theme-color" content="#05060c" />
   <link rel="canonical" href="https://arisregklis.github.io/derek/" />
 
   <!-- Open Graph -->
-  <meta property="og:site_name" content="Derek — Author" />
-  <meta property="og:title" content="Derek — Author of Literary Fiction, Essays &amp; Short Stories" />
-  <meta property="og:description" content="Three books. One voice. Somewhere between silence and the weight of memory." />
-  <meta property="og:image" content="https://arisregklis.github.io/derek/assets/images/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Derek Robotis — Author" />
+  <meta property="og:title" content="Derek Robotis — Four Books, One Universe" />
+  <meta property="og:description" content="A tree of life on another world. A colony beneath the sands of Mars. A detective on planet Pythos. A pyramid at Marathon. Four books, one universe." />
   <meta property="og:url" content="https://arisregklis.github.io/derek/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="el_GR" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Derek — Author of Literary Fiction, Essays &amp; Short Stories" />
-  <meta name="twitter:description" content="Three books. One voice. Somewhere between silence and the weight of memory." />
-  <meta name="twitter:image" content="https://arisregklis.github.io/derek/assets/images/og-image.jpg" />
-
-  <!-- Structured data: Person + WebSite + Books -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://arisregklis.github.io/derek/#website",
-        "url": "https://arisregklis.github.io/derek/",
-        "name": "Derek — Author",
-        "inLanguage": ["en", "el"]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://arisregklis.github.io/derek/#author",
-        "name": "Derek",
-        "jobTitle": "Author",
-        "description": "Author of literary fiction, essays, and short stories, writing in English and Greek.",
-        "url": "https://arisregklis.github.io/derek/",
-        "image": "https://arisregklis.github.io/derek/assets/images/author.webp",
-        "knowsLanguage": ["en", "el"]
-      },
-      {
-        "@type": "Book",
-        "name": "The Weight of Silence",
-        "author": { "@id": "https://arisregklis.github.io/derek/#author" },
-        "genre": "Literary Fiction",
-        "inLanguage": ["en", "el"],
-        "bookFormat": "https://schema.org/EBook",
-        "url": "https://arisregklis.github.io/derek/#books",
-        "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
-      },
-      {
-        "@type": "Book",
-        "name": "Letters to No One",
-        "author": { "@id": "https://arisregklis.github.io/derek/#author" },
-        "genre": "Essays",
-        "inLanguage": ["en", "el"],
-        "bookFormat": "https://schema.org/EBook",
-        "url": "https://arisregklis.github.io/derek/#books",
-        "offers": { "@type": "Offer", "price": "11.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
-      },
-      {
-        "@type": "Book",
-        "name": "Before the Light Fades",
-        "author": { "@id": "https://arisregklis.github.io/derek/#author" },
-        "genre": "Short Stories",
-        "inLanguage": ["en", "el"],
-        "bookFormat": "https://schema.org/EBook",
-        "url": "https://arisregklis.github.io/derek/#books",
-        "offers": { "@type": "Offer", "price": "8.99", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Lemon Squeezy -->
-  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg:      '#1F0F14',
-            surface: '#2A1620',
-            surf2:   '#3A1E2A',
-            border:  '#5A3848',
-            text:    '#F5E9D7',
-            muted:   '#D4BFB0',
-            accent:  '#D4AF37',
-            rust:    '#8B3A1F',
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans:  ['"DM Sans"', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>/* apply saved colour theme before paint */try{var t=localStorage.getItem("site-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+  <script src="assets/js/main.js" defer></script>
+  <!-- Lemon Squeezy overlay checkout -->
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Derek Robotis",
+    "jobTitle": "Author",
+    "url": "https://arisregklis.github.io/derek/",
+    "knowsAbout": ["Science Fiction", "Mystery", "Greek Mythology", "Archaeology"]
+  }
   </script>
-
-  <link rel="stylesheet" href="assets/css/style.css?v=15-complete" />
 </head>
+<body id="top">
+  <a href="#main" class="skip-link sr-only">Skip to content</a>
 
-<body class="bg-bg text-text font-sans antialiased">
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <!-- Vivid animated ambient field (fixed, behind everything) -->
-  <div id="aurora" aria-hidden="true">
-    <span class="aurora-blob aurora-blob--1"></span>
-    <span class="aurora-blob aurora-blob--2"></span>
-    <span class="aurora-blob aurora-blob--3"></span>
-    <span class="aurora-grain"></span>
-  </div>
-  <div id="cursor-aura" aria-hidden="true"></div>
-
-  <!-- ══════════════════════════════════════════
-       INTRO OVERLAY
-  ══════════════════════════════════════════ -->
-  <div id="site-intro" role="presentation" aria-hidden="true">
-    <!-- Ambient light -->
-    <div class="intro-glow-1" aria-hidden="true"></div>
-    <div class="intro-glow-2" aria-hidden="true"></div>
-    <!-- Corner ornaments (drawn in by JS trigger) -->
-    <div class="intro-corner intro-corner--tl" aria-hidden="true"></div>
-    <div class="intro-corner intro-corner--tr" aria-hidden="true"></div>
-    <div class="intro-corner intro-corner--bl" aria-hidden="true"></div>
-    <div class="intro-corner intro-corner--br" aria-hidden="true"></div>
-    <!-- Content -->
-    <div class="intro-inner">
-      <div class="intro-line" aria-hidden="true"></div>
-      <p class="intro-quote"></p>
-      <div class="intro-line intro-line--2" aria-hidden="true"></div>
-      <p class="intro-author">— Derek</p>
-    </div>
-    <button class="intro-skip" aria-label="Skip introduction">Skip</button>
-    <div class="intro-progress" aria-hidden="true"></div>
-  </div>
-
-  <a href="#main" class="skip-link">Skip to content</a>
-
-  <!-- ══════════════════════════════════════════
-       FLOATING CONTROL DOCK
-  ══════════════════════════════════════════ -->
-  <div id="control-dock" aria-label="Site controls">
-    <button id="theme-toggle" class="dock-btn" aria-label="Toggle light / dark mode" title="Light / Dark">
-      <span class="dock-icon dock-icon--moon" aria-hidden="true">&#9789;</span>
-      <span class="dock-icon dock-icon--sun" aria-hidden="true">&#9728;</span>
-    </button>
-    <button id="audio-toggle" class="dock-btn" aria-label="Toggle ambient sound" aria-pressed="false" title="Ambient sound">
-      <span class="dock-icon dock-icon--note" aria-hidden="true">&#9834;</span>
-      <span class="audio-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-    </button>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       NAVIGATION
-  ══════════════════════════════════════════ -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
-
-      <a href="#" class="font-serif font-bold text-lg sm:text-xl text-text tracking-wide">Derek</a>
-
-      <!-- Desktop links -->
-      <div class="hidden md:flex items-center gap-10">
-        <a href="#books"   class="nav-link" data-en="Books"   data-gr="Βιβλία">Books</a>
-        <a href="#about"   class="nav-link" data-en="About"   data-gr="Σχετικά">About</a>
-        <a href="faq.html" class="nav-link" data-en="Q&amp;A"   data-gr="Ερωτήσεις">Q&amp;A</a>
-        <a href="#contact" class="nav-link" data-en="Contact" data-gr="Επικοινωνία">Contact</a>
-      </div>
-
-      <div class="flex items-center gap-3 sm:gap-6">
-        <!-- Language toggle -->
-        <div class="flex items-center gap-1 sm:gap-2 text-sm">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <span class="text-border">/</span>
-          <button class="lang-btn" data-lang="gr">GR</button>
-        </div>
-
-        <!-- Mobile hamburger -->
-        <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+  <!-- ══ NAV ══ -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">DEREK&nbsp;<em>ROBOTIS</em></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#library">The Books</a></li>
+          <li><a href="#tree">The Tree</a></li>
+          <li><a href="#colony">Second Colony</a></li>
+          <li><a href="#noir">Shadows</a></li>
+          <li><a href="#isida">Isida</a></li>
+          <li><a href="#universe">One Universe</a></li>
+          <li><a href="about.html">Author</a></li>
+        </ul>
+      </nav>
+      <div class="theme-wrap">
+        <button class="theme-btn" aria-expanded="false" aria-label="Change site colours" title="Change colours">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-.9 2-1.8 0-.8-.5-1.2-.5-2 0-1 .8-1.7 1.9-1.7H17A5 5 0 0 0 21 11c-.4-4.5-4.3-8-9-8Z" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="7.5" cy="11" r="1.3" fill="#e8c56b"/><circle cx="11" cy="7.5" r="1.3" fill="#ff6b3d"/>
+            <circle cx="15.5" cy="8.5" r="1.3" fill="#35e0c8"/><circle cx="8.5" cy="15.5" r="1.3" fill="#d9a441"/>
+          </svg>
         </button>
+        <div class="theme-pop" role="menu" aria-label="Colour themes">
+          <p class="theme-pop-label">Site Colour</p>
+          <div class="theme-swatches">
+            <button class="swatch" data-theme="tree" role="menuitem" aria-label="Cosmic Gold"></button>
+            <button class="swatch" data-theme="colony" role="menuitem" aria-label="Mars Red"></button>
+            <button class="swatch" data-theme="noir" role="menuitem" aria-label="Neon Teal"></button>
+            <button class="swatch" data-theme="isida" role="menuitem" aria-label="Ancient Amber"></button>
+          </div>
+          <div class="swatch-names">
+            <span>Gold</span><span>Mars</span><span>Neon</span><span>Amber</span>
+          </div>
+        </div>
       </div>
+      <button class="nav-burger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-border px-5 py-5 flex flex-col gap-5">
-      <a href="#books"   class="nav-link text-lg" data-en="Books"   data-gr="Βιβλία">Books</a>
-      <a href="#about"   class="nav-link text-lg" data-en="About"   data-gr="Σχετικά">About</a>
-      <a href="faq.html" class="nav-link text-lg" data-en="Q&amp;A"   data-gr="Ερωτήσεις">Q&amp;A</a>
-      <a href="#contact" class="nav-link text-lg" data-en="Contact" data-gr="Επικοινωνία">Contact</a>
-    </div>
-  </nav>
-
-  <!-- ══════════════════════════════════════════
-       HERO
-  ══════════════════════════════════════════ -->
   <main id="main">
 
-  <section id="hero" class="pt-16 lg:pt-20 lg:min-h-screen lg:flex lg:items-center bg-bg">
-    <div class="hero-glow-1" aria-hidden="true"></div>
-    <div class="hero-glow-2" aria-hidden="true"></div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full pt-2 pb-8 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-      <!-- Left: text (centered + dramatic on mobile, side-aligned on desktop) -->
-      <div class="hero-text relative reveal">
-        <!-- Mobile-only fanned book stack above the headline -->
-        <div class="hero-books-mobile lg:hidden" aria-hidden="true">
-          <div class="hero-book hero-book--a">
-            <span class="hero-book-line"></span>
-            <span class="hero-book-title">The Weight<br/>of Silence</span>
-            <span class="hero-book-seal">D</span>
-          </div>
-          <div class="hero-book hero-book--b">
-            <span class="hero-book-line"></span>
-            <span class="hero-book-title">Letters to<br/>No One</span>
-            <span class="hero-book-seal">D</span>
-          </div>
-          <div class="hero-book hero-book--c">
-            <span class="hero-book-line"></span>
-            <span class="hero-book-title">Before the<br/>Light Fades</span>
-            <span class="hero-book-seal">D</span>
-          </div>
-        </div>
-
-        <p class="eyebrow eyebrow--centered mb-5 sm:mb-6" data-en="Author · Writer · Essayist" data-gr="Συγγραφέας · Δοκιμιογράφος">
-          Author · Writer · Essayist
-        </p>
-
-        <h1 class="font-serif hero-title leading-[1.05] mb-6 sm:mb-8">
-          <span class="italic" data-en="Stories that stay" data-gr="Ιστορίες">Stories that stay</span><br />
-          <span class="outline-gold" data-en="with you." data-gr="που μένουν.">with you.</span>
-        </h1>
-
-        <!-- Mobile-only gold ornament between title and body -->
-        <div class="hero-flourish lg:hidden" aria-hidden="true">
-          <span></span><em>&#10086;</em><span></span>
-        </div>
-
-        <p class="hero-lede text-muted text-base sm:text-lg leading-relaxed mb-8 sm:mb-12" data-en="Three books. One voice. Somewhere between silence and the weight of memory." data-gr="Τρία βιβλία. Μία φωνή. Κάπου μεταξύ σιωπής και του βάρους της μνήμης.">
-          Three books. One voice. Somewhere between silence and the weight of memory.
-        </p>
-
-        <div class="hero-cta flex flex-col sm:flex-row gap-3 sm:gap-4">
-          <a href="#books" class="btn-primary w-full sm:w-auto" data-en="Browse Books" data-gr="Δείτε τα Βιβλία">Browse Books</a>
-          <a href="#about" class="btn-ghost w-full sm:w-auto"   data-en="About the Author" data-gr="Για τον Συγγραφέα">About the Author</a>
-        </div>
-
-        <!-- Mobile-only scroll cue -->
-        <div class="hero-scroll-cue lg:hidden" aria-hidden="true">
-          <span></span>
-          <small data-en="Scroll" data-gr="Κύλιση">Scroll</small>
+    <!-- ══ HERO ══ -->
+    <section class="hero" aria-label="Introduction">
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="hero-kicker">Science Fiction · Mystery · Myth</p>
+        <h1 class="hero-name">DEREK <span class="surname">ROBOTIS</span></h1>
+        <p class="hero-tag">Four books. One universe. Stories that reach up to the stars, down into the earth, and back through time.</p>
+        <p class="hero-type" id="typewriter" aria-live="off"><span class="type-text"></span><span class="caret" aria-hidden="true"></span></p>
+        <div class="hero-cta">
+          <a href="#library" class="btn btn-solid">Explore the Books</a>
+          <a href="#universe" class="btn btn-ghost">How They Connect</a>
         </div>
       </div>
+      <div class="hero-scroll" aria-hidden="true">Scroll</div>
+    </section>
 
-      <!-- Right: book cover mockups -->
-      <div class="hidden lg:flex items-end justify-center gap-4 h-80 relative reveal reveal-delay-1">
-        <div class="book-mockup book-mockup--1">
-          <div class="book-cover">
-            <div class="accent-line"></div>
-            <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">The Weight<br/>of Silence</p>
-            <p class="author-label">Derek</p>
-            <span class="wax-seal" aria-hidden="true">D</span>
-          </div>
+    <!-- ══ LIBRARY ══ -->
+    <section id="library" class="section library">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">The Library</span>
+          <h2 class="section-title">Choose Your World</h2>
+          <p class="section-sub">Every cover is a door. Step through.</p>
         </div>
-        <div class="book-mockup book-mockup--2">
-          <div class="book-cover book-cover--2">
-            <div class="accent-line accent-line--2"></div>
-            <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">Letters to<br/>No One</p>
-            <p class="author-label">Derek</p>
-            <span class="wax-seal" aria-hidden="true">D</span>
-          </div>
-        </div>
-        <div class="book-mockup book-mockup--3">
-          <div class="book-cover book-cover--3">
-            <div class="accent-line accent-line--3"></div>
-            <p class="font-serif italic text-lg text-text leading-snug mt-8 px-5">Before the<br/>Light Fades</p>
-            <p class="author-label">Derek</p>
-            <span class="wax-seal" aria-hidden="true">D</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       BOOKS SECTION
-  ══════════════════════════════════════════ -->
-  <section id="books" class="py-20 sm:py-28 bg-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-
-      <div class="ornament-divider reveal" aria-hidden="true">
-        <span class="ornament-line"></span>
-        <span class="ornament-glyph">&#10086;</span>
-        <span class="ornament-line"></span>
-      </div>
-
-      <div class="mb-12 sm:mb-16 reveal">
-        <span class="section-numeral">I.</span>
-        <p class="eyebrow mb-4" data-en="Books" data-gr="Βιβλία">Books</p>
-        <h2 class="section-title" data-en="Available Now" data-gr="Διαθέσιμα Τώρα">Available Now</h2>
-        <p class="text-muted text-base max-w-xl mt-4" data-en="Three works spanning literary fiction, essays, and short stories." data-gr="Τρία έργα που εκτείνονται σε λογοτεχνική πεζογραφία, δοκίμια και διηγήματα.">
-          Three works spanning literary fiction, essays, and short stories.
-        </p>
-      </div>
-
-      <!-- Book cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
-
-        <!-- Book 1 -->
-        <div class="book-card group reveal" data-book="1">
-          <div class="book-card-cover relative">
-            <!-- Replace with actual cover image: <img src="assets/images/book-cover-1.jpg" alt="The Weight of Silence" class="w-full h-full object-cover" /> -->
-            <div class="cover-placeholder">
-              <div class="accent-line ml-6 mt-10"></div>
-              <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">The Weight<br/>of Silence</p>
-              <p class="author-label ml-6">Derek</p>
-            </div>
-            <span class="wax-seal" aria-hidden="true">D</span>
-            <div class="price-badge">€9.99</div>
-          </div>
-          <div class="book-card-body">
-            <p class="genre-label" data-en="Literary Fiction" data-gr="Λογοτεχνική Πεζογραφία">Literary Fiction</p>
-            <h3 class="book-title font-serif italic" data-en="The Weight of Silence" data-gr="Το Βάρος της Σιωπής">The Weight of Silence</h3>
-            <p class="book-desc text-muted text-sm leading-relaxed" data-en="A meditation on loss, memory, and the spaces between words. Set across three generations of a Greek family." data-gr="Ένας στοχασμός για την απώλεια, τη μνήμη και τα κενά ανάμεσα στις λέξεις. Σε τρεις γενιές μιας ελληνικής οικογένειας.">
-              A meditation on loss, memory, and the spaces between words. Set across three generations of a Greek family.
-            </p>
-            <div class="book-actions">
-              <button class="look-inside" data-book="1" data-en="Look Inside" data-gr="Δείτε Μέσα">Look Inside</button>
-              <!-- REPLACE href with your Lemon Squeezy product URL -->
-              <a href="YOUR_LS_PRODUCT_URL_1" class="lemonsqueezy-button buy-btn" data-en="Buy — €9.99" data-gr="Αγορά — €9.99">
-                Buy — €9.99
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Book 2 -->
-        <div class="book-card group reveal reveal-delay-1" data-book="2">
-          <div class="book-card-cover relative">
-            <div class="cover-placeholder">
-              <div class="accent-line ml-6 mt-10"></div>
-              <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">Letters to<br/>No One</p>
-              <p class="author-label ml-6">Derek</p>
-            </div>
-            <span class="wax-seal" aria-hidden="true">D</span>
-            <div class="price-badge">€11.99</div>
-          </div>
-          <div class="book-card-body">
-            <p class="genre-label" data-en="Essays" data-gr="Δοκίμια">Essays</p>
-            <h3 class="book-title font-serif italic" data-en="Letters to No One" data-gr="Γράμματα σε Κανέναν">Letters to No One</h3>
-            <p class="book-desc text-muted text-sm leading-relaxed" data-en="Personal essays on language, identity, and the act of writing. For those who think between languages." data-gr="Προσωπικά δοκίμια για τη γλώσσα, την ταυτότητα και τη γραφή. Για όσους σκέφτονται ανάμεσα σε γλώσσες.">
-              Personal essays on language, identity, and the act of writing. For those who think between languages.
-            </p>
-            <div class="book-actions">
-              <button class="look-inside" data-book="2" data-en="Look Inside" data-gr="Δείτε Μέσα">Look Inside</button>
-              <!-- REPLACE href with your Lemon Squeezy product URL -->
-              <a href="YOUR_LS_PRODUCT_URL_2" class="lemonsqueezy-button buy-btn" data-en="Buy — €11.99" data-gr="Αγορά — €11.99">
-                Buy — €11.99
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Book 3 -->
-        <div class="book-card group reveal reveal-delay-2" data-book="3">
-          <div class="book-card-cover relative">
-            <div class="cover-placeholder">
-              <div class="accent-line ml-6 mt-10"></div>
-              <p class="font-serif italic text-xl text-text leading-snug px-6 mt-4">Before the<br/>Light Fades</p>
-              <p class="author-label ml-6">Derek</p>
-            </div>
-            <span class="wax-seal" aria-hidden="true">D</span>
-            <div class="price-badge">€8.99</div>
-          </div>
-          <div class="book-card-body">
-            <p class="genre-label" data-en="Short Stories" data-gr="Διηγήματα">Short Stories</p>
-            <h3 class="book-title font-serif italic" data-en="Before the Light Fades" data-gr="Πριν Σβήσει το Φως">Before the Light Fades</h3>
-            <p class="book-desc text-muted text-sm leading-relaxed" data-en="Fourteen stories from the margins of ordinary life. Each one a world compressed to its essential truth." data-gr="Δεκατέσσερα διηγήματα από τα περιθώρια της καθημερινής ζωής. Το καθένα ένας κόσμος συμπιεσμένος στην ουσιαστική του αλήθεια.">
-              Fourteen stories from the margins of ordinary life. Each one a world compressed to its essential truth.
-            </p>
-            <div class="book-actions">
-              <button class="look-inside" data-book="3" data-en="Look Inside" data-gr="Δείτε Μέσα">Look Inside</button>
-              <!-- REPLACE href with your Lemon Squeezy product URL -->
-              <a href="YOUR_LS_PRODUCT_URL_3" class="lemonsqueezy-button buy-btn" data-en="Buy — €8.99" data-gr="Αγορά — €8.99">
-                Buy — €8.99
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bundle card -->
-      <div class="bundle-card reveal reveal-delay-3">
-        <div class="bundle-accent-bar"></div>
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 pl-6 sm:pl-8">
-          <div>
-            <h3 class="font-serif italic text-2xl md:text-3xl text-text mb-1" data-en="Complete Collection" data-gr="Πλήρης Συλλογή">Complete Collection</h3>
-            <p class="text-muted text-sm" data-en="All three books · Best value · Save 20%" data-gr="Και τα τρία βιβλία · Καλύτερη αξία · Εξοικονομήστε 20%">
-              All three books · Best value · Save 20%
-            </p>
-          </div>
-          <!-- REPLACE href with your Lemon Squeezy bundle URL -->
-          <a href="YOUR_LS_BUNDLE_URL" class="lemonsqueezy-button bundle-btn" data-en="€24.99 — Get the Bundle" data-gr="€24.99 — Αποκτήστε τη Συλλογή">
-            €24.99 — Get the Bundle
+        <div class="library-grid">
+          <a href="#tree" class="shelf-card reveal">
+            <svg viewBox="0 0 400 600" role="img" aria-label="The Tree — cover"><use href="#cover-tree"/></svg>
+            <span class="shelf-label">The Tree<small>Cosmic Odyssey</small></span>
+          </a>
+          <a href="#colony" class="shelf-card reveal" style="transition-delay:.08s">
+            <svg viewBox="0 0 400 600" role="img" aria-label="The Second Colony — cover"><use href="#cover-colony"/></svg>
+            <span class="shelf-label">The Second Colony<small>Mars Sci-Fi</small></span>
+          </a>
+          <a href="#noir" class="shelf-card reveal" style="transition-delay:.16s">
+            <svg viewBox="0 0 400 600" role="img" aria-label="Shadows and Deceit — cover"><use href="#cover-noir"/></svg>
+            <span class="shelf-label">Shadows and Deceit<small>Sci-Fi Noir</small></span>
+          </a>
+          <a href="#isida" class="shelf-card reveal" style="transition-delay:.24s">
+            <svg viewBox="0 0 400 600" role="img" aria-label="The Pyramid of Isida — cover"><use href="#cover-isida"/></svg>
+            <span class="shelf-label">The Pyramid of Isida<small>Myth &amp; Time</small></span>
           </a>
         </div>
       </div>
+    </section>
 
-      <!-- Start Here — guides new readers to their first book -->
-      <div class="start-here reveal" id="start-here">
-        <p class="eyebrow mb-3" data-en="New here?" data-gr="Πρώτη φορά εδώ;">New here?</p>
-        <h3 class="font-serif italic text-2xl sm:text-3xl text-text mb-2" data-en="Where should I start?" data-gr="Από πού να ξεκινήσω;">Where should I start?</h3>
-        <p class="text-muted text-sm mb-6" data-en="Tell me what you like to read — I'll point you to the right door." data-gr="Πείτε μου τι σας αρέσει να διαβάζετε — θα σας δείξω τη σωστή πόρτα.">
-          Tell me what you like to read — I'll point you to the right door.
-        </p>
-        <div class="start-here-options">
-          <button class="start-opt" data-target="1" data-en="Novels that linger" data-gr="Μυθιστορήματα που μένουν">Novels that linger</button>
-          <button class="start-opt" data-target="2" data-en="Essays &amp; ideas" data-gr="Δοκίμια &amp; ιδέες">Essays &amp; ideas</button>
-          <button class="start-opt" data-target="3" data-en="Short &amp; piercing" data-gr="Σύντομα &amp; διαπεραστικά">Short &amp; piercing</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       PRAISE / PRESS QUOTES
-  ══════════════════════════════════════════ -->
-  <section id="praise">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-
-      <div class="mb-10 sm:mb-14 reveal">
-        <span class="section-numeral">II.</span>
-        <p class="eyebrow mb-4" data-en="Praise" data-gr="Κριτικές">Praise</p>
-        <h2 class="section-title" data-en="What Readers Say" data-gr="Τι Λένε οι Αναγνώστες">What Readers Say</h2>
-      </div>
-
-      <div class="press-grid">
-        <article class="press-card reveal">
-          <p class="press-quote" data-en="A quiet, devastating voice. Derek writes the way silence sounds at three in the morning." data-gr="Μια ήσυχη, συγκλονιστική φωνή. Ο Derek γράφει όπως ακούγεται η σιωπή στις τρεις τα ξημερώματα.">
-            A quiet, devastating voice. Derek writes the way silence sounds at three in the morning.
-          </p>
-          <p class="press-source">
-            <span data-en="Mariana Telis · Athens Review of Books" data-gr="Μαριάννα Τελή · Athens Review of Books">Mariana Telis · Athens Review of Books</span>
-          </p>
-        </article>
-
-        <article class="press-card reveal reveal-delay-1">
-          <p class="press-quote" data-en="Few writers move between languages with this much grace. Each page rewards a second reading." data-gr="Λίγοι συγγραφείς κινούνται ανάμεσα σε γλώσσες με τόση χάρη. Κάθε σελίδα ανταμείβει μια δεύτερη ανάγνωση.">
-            Few writers move between languages with this much grace. Each page rewards a second reading.
-          </p>
-          <p class="press-source">
-            <span data-en="The Mediterranean Quarterly" data-gr="The Mediterranean Quarterly">The Mediterranean Quarterly</span>
-          </p>
-        </article>
-
-        <article class="press-card reveal reveal-delay-2">
-          <p class="press-quote" data-en="Memory, exile, the texture of an ordinary afternoon — Derek finds the extraordinary inside all of it." data-gr="Μνήμη, εξορία, η υφή ενός συνηθισμένου απογεύματος — ο Derek βρίσκει το εξαιρετικό μέσα σε όλα αυτά.">
-            Memory, exile, the texture of an ordinary afternoon — Derek finds the extraordinary inside all of it.
-          </p>
-          <p class="press-source">
-            <span data-en="Lefteris Pavlou · Kathimerini Books" data-gr="Λευτέρης Παύλου · Καθημερινή Βιβλία">Lefteris Pavlou · Kathimerini Books</span>
-          </p>
-        </article>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       INTERACTIVE — WHISPER A LINE
-  ══════════════════════════════════════════ -->
-  <section id="whisper" class="py-20 sm:py-28">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
-      <p class="eyebrow mb-5" data-en="A Line at a Time" data-gr="Μία Γραμμή τη Φορά">A Line at a Time</p>
-      <div class="whisper-stage">
-        <span class="whisper-quote-mark" aria-hidden="true">&#8220;</span>
-        <blockquote id="whisper-line" class="whisper-line font-serif italic" aria-live="polite"></blockquote>
-        <p id="whisper-source" class="whisper-source"></p>
-      </div>
-      <button id="whisper-btn" class="btn-primary whisper-btn" data-en="Whisper another line" data-gr="Ψιθύρισε άλλη μία">
-        Whisper another line
-      </button>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       MARQUEE BAND
-  ══════════════════════════════════════════ -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span data-en="Literary Fiction" data-gr="Λογοτεχνική Πεζογραφία">Literary Fiction</span>
-      <span data-en="Essays" data-gr="Δοκίμια">Essays</span>
-      <span data-en="Short Stories" data-gr="Διηγήματα">Short Stories</span>
-      <span data-en="Memory" data-gr="Μνήμη">Memory</span>
-      <span data-en="Language" data-gr="Γλώσσα">Language</span>
-      <span data-en="Identity" data-gr="Ταυτότητα">Identity</span>
-      <span data-en="Silence" data-gr="Σιωπή">Silence</span>
-      <span data-en="The Mediterranean" data-gr="Η Μεσόγειος">The Mediterranean</span>
-      <!-- Duplicate for seamless scroll -->
-      <span data-en="Literary Fiction" data-gr="Λογοτεχνική Πεζογραφία">Literary Fiction</span>
-      <span data-en="Essays" data-gr="Δοκίμια">Essays</span>
-      <span data-en="Short Stories" data-gr="Διηγήματα">Short Stories</span>
-      <span data-en="Memory" data-gr="Μνήμη">Memory</span>
-      <span data-en="Language" data-gr="Γλώσσα">Language</span>
-      <span data-en="Identity" data-gr="Ταυτότητα">Identity</span>
-      <span data-en="Silence" data-gr="Σιωπή">Silence</span>
-      <span data-en="The Mediterranean" data-gr="Η Μεσόγειος">The Mediterranean</span>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       ABOUT SECTION
-  ══════════════════════════════════════════ -->
-  <section id="about" class="with-corners py-20 sm:py-28 bg-[#241019]">
-    <span class="corner corner--tl" aria-hidden="true"></span>
-    <span class="corner corner--tr" aria-hidden="true"></span>
-    <span class="corner corner--bl" aria-hidden="true"></span>
-    <span class="corner corner--br" aria-hidden="true"></span>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-
-      <!-- Photo -->
-      <div class="relative reveal mx-auto lg:mx-0 w-full max-w-sm">
-        <div class="aspect-[3/4] bg-surf2 rounded overflow-hidden">
-          <img src="assets/images/author.webp" alt="Portrait of author Derek" width="384" height="512" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="absolute -bottom-4 -right-4 w-20 h-20 sm:w-24 sm:h-24 border border-accent opacity-30 rounded"></div>
-      </div>
-
-      <!-- Text -->
-      <div class="reveal reveal-delay-1">
-        <span class="section-numeral">III.</span>
-        <p class="eyebrow mb-5 sm:mb-6" data-en="About" data-gr="Σχετικά">About</p>
-
-        <blockquote class="pullquote font-serif italic text-xl sm:text-2xl md:text-3xl text-text leading-snug mb-8 sm:mb-10 pl-4 sm:pl-6" data-en='Writing is the act of listening carefully.' data-gr='Η γραφή είναι η πράξη της προσεκτικής ακρόασης.'>
-          Writing is the act of listening carefully.
-        </blockquote>
-
-        <p class="drop-cap text-muted leading-relaxed mb-5" data-en="Derek is a writer working at the intersection of memory, language, and identity. His work has appeared in literary journals across Europe, and he writes equally in English and Greek." data-gr="Ο Derek είναι συγγραφέας που εργάζεται στη διασταύρωση μνήμης, γλώσσας και ταυτότητας. Το έργο του έχει εμφανιστεί σε λογοτεχνικά περιοδικά σε όλη την Ευρώπη, και γράφει εξίσου στα Αγγλικά και τα Ελληνικά.">
-          Derek is a writer working at the intersection of memory, language, and identity. His work has appeared in literary journals across Europe, and he writes equally in English and Greek.
-        </p>
-
-        <p class="text-muted leading-relaxed mb-10 sm:mb-12" data-en="His essays explore what it means to inhabit two languages, and his fiction finds the extraordinary within the ordinary rhythms of Mediterranean life." data-gr="Τα δοκίμιά του εξερευνούν τι σημαίνει να κατοικείς σε δύο γλώσσες, και η πεζογραφία του ανακαλύπτει το εξαιρετικό μέσα στους συνηθισμένους ρυθμούς της μεσογειακής ζωής.">
-          His essays explore what it means to inhabit two languages, and his fiction finds the extraordinary within the ordinary rhythms of Mediterranean life.
-        </p>
-
-        <!-- Stats -->
-        <div class="flex flex-wrap gap-x-8 gap-y-6 sm:gap-12 border-t border-border pt-8">
-          <div>
-            <span class="stat-number" data-target="3">3</span>
-            <p class="text-muted text-xs tracking-widest uppercase" data-en="Books" data-gr="Βιβλία">Books</p>
+    <!-- ══ BOOK · THE TREE ══ -->
+    <section id="tree" class="section book tree">
+      <div class="wrap book-grid">
+        <div class="book-cover reveal" data-dir="left">
+          <div class="cover-glow" aria-hidden="true"></div>
+          <div class="cover-frame">
+            <svg viewBox="0 0 400 600" role="img" aria-label="The Tree by Derek Robotis — a golden tree glowing on a distant world beneath a nebula"><use href="#cover-tree"/></svg>
           </div>
-          <div>
-            <span class="stat-number" data-target="4000" data-suffix="+">4,000+</span>
-            <p class="text-muted text-xs tracking-widest uppercase" data-en="Readers" data-gr="Αναγνώστες">Readers</p>
+        </div>
+        <div class="book-info reveal" data-dir="right">
+          <div class="book-no" aria-hidden="true">01</div>
+          <span class="book-series">The Attic Window</span>
+          <h2 class="book-title">The Tree</h2>
+          <div class="book-tags">
+            <span class="tag">Cosmic Odyssey</span><span class="tag">Coming of Age</span><span class="tag">First Contact</span>
           </div>
-          <div>
-            <span class="stat-number" data-target="12">12</span>
-            <p class="text-muted text-xs tracking-widest uppercase" data-en="Countries" data-gr="Χώρες">Countries</p>
+          <p class="book-blurb">Under a marshal's shadow, in a world taught to fear its own future, a quiet boy named Harry points a small telescope out of his attic window — and the universe answers. A string of mysterious coordinates leads him beyond Earth to a planet that holds a single living thing: a golden tree. The tree of life.</p>
+          <p class="book-blurb">With companions named for the heavens — Orion, Demeter, Echetlaeus — Harry's journey carries him from a schoolboy's bedroom to worlds where the Muses still whisper, through a veil of starlight, toward two lost years he cannot remember.</p>
+          <blockquote class="book-quote">"Life is pervasive in the universe. What mysteries did it hide?"<cite>— The Tree, Chapter 4</cite></blockquote>
+          <div class="book-actions">
+            <a href="tree.html" class="btn btn-solid btn-sm">Enter the World</a>
+            <button class="btn btn-ghost btn-sm" data-modal="modal-tree">Read an Excerpt</button>
+            <!-- TODO: Replace with your Lemon Squeezy product link, e.g. https://YOURSTORE.lemonsqueezy.com/buy/PRODUCT-ID?embed=1 -->
+            <a href="https://YOURSTORE.lemonsqueezy.com/buy/PRODUCT-ID-TREE?embed=1" class="lemonsqueezy-button btn btn-ghost btn-sm">Buy the Book</a>
+          </div>
+          <div class="chapters">
+            <button class="chapters-toggle" aria-expanded="false">Inside the book — 9 chapters <span class="chev">▾</span></button>
+            <div class="chapters-list">
+              <ol>
+                <li><b>1</b> The Dawn of the New Age</li>
+                <li><b>2</b> Harry's Stargazing</li>
+                <li><b>3</b> The Mysterious Coordinates</li>
+                <li><b>4</b> The Tree of Life</li>
+                <li><b>5</b> A World Beyond Earth</li>
+                <li><b>6</b> Secrets and Discoveries</li>
+                <li><b>7</b> The Veil of Starlight</li>
+                <li><b>8</b> Connections and Revelations</li>
+                <li><b>9</b> The Path Forward</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       BENTO — THE WRITER IN FRAGMENTS
-  ══════════════════════════════════════════ -->
-  <section id="fragments" class="py-20 sm:py-28 bg-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-
-      <div class="mb-10 sm:mb-14 reveal">
-        <span class="section-numeral">IV.</span>
-        <p class="eyebrow mb-4" data-en="The Writer" data-gr="Ο Συγγραφέας">The Writer</p>
-        <h2 class="section-title" data-en="In Fragments" data-gr="Σε Θραύσματα">In Fragments</h2>
-        <p class="text-muted text-base max-w-xl mt-4" data-en="Small windows into the desk, the drafts, and the days between books." data-gr="Μικρά παράθυρα στο γραφείο, στα προσχέδια και στις μέρες ανάμεσα στα βιβλία.">
-          Small windows into the desk, the drafts, and the days between books.
-        </p>
-      </div>
-
-      <div class="bento-grid">
-
-        <!-- Big quote tile -->
-        <article class="bento-tile bento-tile--quote reveal">
-          <p class="tile-label" data-en="From a notebook" data-gr="Από ένα σημειωματάριο">From a notebook</p>
-          <p class="tile-quote font-serif italic" data-en="I write to find out what the silence was trying to say." data-gr="Γράφω για να μάθω τι προσπαθούσε να πει η σιωπή.">
-            I write to find out what the silence was trying to say.
-          </p>
-          <p class="tile-more" data-en="— margin note, undated" data-gr="— σημείωση στο περιθώριο, αχρονολόγητη">— margin note, undated</p>
-        </article>
-
-        <!-- Now writing -->
-        <article class="bento-tile bento-tile--writing reveal reveal-delay-1">
-          <p class="tile-label" data-en="Now writing" data-gr="Γράφει τώρα">Now writing</p>
-          <h3 class="tile-title font-serif italic" data-en="The Cartographer of Absence" data-gr="Ο Χαρτογράφος της Απουσίας">The Cartographer of Absence</h3>
-          <div class="nw-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" aria-label="Draft progress">
-            <i style="--pct:64%"></i>
+    <!-- ══ BOOK · THE SECOND COLONY ══ -->
+    <section id="colony" class="section book colony flip">
+      <div class="wrap book-grid">
+        <div class="book-cover reveal" data-dir="right">
+          <div class="cover-glow" aria-hidden="true"></div>
+          <div class="cover-frame">
+            <svg viewBox="0 0 400 600" role="img" aria-label="The Second Colony by Derek Robotis — a Mars habitat above a glowing underground tunnel"><use href="#cover-colony"/></svg>
           </div>
-          <p class="tile-note" data-en="A novel · second draft · 64%" data-gr="Μυθιστόρημα · δεύτερο προσχέδιο · 64%">A novel · second draft · 64%</p>
-          <p class="tile-more" data-en="Expected to take exactly as long as it needs." data-gr="Θα πάρει ακριβώς όσο χρόνο χρειάζεται.">Expected to take exactly as long as it needs.</p>
-        </article>
-
-        <!-- Two languages -->
-        <article class="bento-tile reveal reveal-delay-1">
-          <p class="tile-label" data-en="Two languages" data-gr="Δύο γλώσσες">Two languages</p>
-          <p class="tile-big font-serif">EN · ΕΛ</p>
-          <p class="tile-note" data-en="Precise in one, tender in the other." data-gr="Ακριβής στη μία, τρυφερός στην άλλη.">Precise in one, tender in the other.</p>
-        </article>
-
-        <!-- Currently reading -->
-        <article class="bento-tile reveal reveal-delay-2">
-          <p class="tile-label" data-en="Currently reading" data-gr="Διαβάζει τώρα">Currently reading</p>
-          <p class="tile-body font-serif italic" data-en="Anna Karenina — again." data-gr="Άννα Καρένινα — ξανά.">Anna Karenina — again.</p>
-          <p class="tile-more" data-en="Some houses you keep returning to." data-gr="Σε κάποια σπίτια επιστρέφεις συνέχεια.">Some houses you keep returning to.</p>
-        </article>
-
-        <!-- Written to -->
-        <article class="bento-tile reveal reveal-delay-2">
-          <p class="tile-label" data-en="Written to" data-gr="Γράφει με">Written to</p>
-          <p class="tile-body" data-en="Rain. Rebetiko. Silence." data-gr="Βροχή. Ρεμπέτικο. Σιωπή.">Rain. Rebetiko. Silence.</p>
-          <p class="tile-more" data-en="In that order, most days." data-gr="Με αυτή τη σειρά, τις περισσότερες μέρες.">In that order, most days.</p>
-        </article>
-
-        <!-- Reach -->
-        <article class="bento-tile reveal reveal-delay-3">
-          <p class="tile-label" data-en="Readers" data-gr="Αναγνώστες">Readers</p>
-          <p class="tile-big font-serif">4,000+</p>
-          <p class="tile-note" data-en="across 12 countries — thank you." data-gr="σε 12 χώρες — ευχαριστώ.">across 12 countries — thank you.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       EVENTS / APPEARANCES
-  ══════════════════════════════════════════ -->
-  <section id="events" class="py-20 sm:py-28 bg-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-
-      <div class="mb-10 sm:mb-14 reveal">
-        <span class="section-numeral">V.</span>
-        <p class="eyebrow mb-4" data-en="Events" data-gr="Εκδηλώσεις">Events</p>
-        <h2 class="section-title" data-en="Readings &amp; Appearances" data-gr="Αναγνώσεις &amp; Εμφανίσεις">Readings &amp; Appearances</h2>
-      </div>
-
-      <!-- TODO: Replace with real events; remove rows that don't apply -->
-      <div class="events-list">
-        <article class="event-row reveal">
-          <div class="event-date" aria-hidden="true"><span class="event-day">14</span><span class="event-month" data-en="OCT" data-gr="ΟΚΤ">OCT</span></div>
-          <div class="event-info">
-            <h3 class="event-title font-serif italic" data-en="An Evening of Silence — reading &amp; conversation" data-gr="Μια Βραδιά Σιωπής — ανάγνωση &amp; συζήτηση">An Evening of Silence — reading &amp; conversation</h3>
-            <p class="event-venue" data-en="Public Café, Syntagma · Athens" data-gr="Public Café, Σύνταγμα · Αθήνα">Public Café, Syntagma · Athens</p>
+        </div>
+        <div class="book-info reveal" data-dir="left">
+          <div class="book-no" aria-hidden="true">02</div>
+          <span class="book-series">The Red Sands</span>
+          <h2 class="book-title">The Second Colony</h2>
+          <div class="book-tags">
+            <span class="tag">Mars</span><span class="tag">Ancient Civilizations</span><span class="tag">Space Colonization</span>
           </div>
-          <span class="event-chip" data-en="In person" data-gr="Με φυσική παρουσία">In person</span>
-        </article>
-
-        <article class="event-row reveal reveal-delay-1">
-          <div class="event-date" aria-hidden="true"><span class="event-day">06</span><span class="event-month" data-en="NOV" data-gr="ΝΟΕ">NOV</span></div>
-          <div class="event-info">
-            <h3 class="event-title font-serif italic" data-en="Ask me anything — live reader Q&amp;A" data-gr="Ρωτήστε με ό,τι θέλετε — ζωντανά">Ask me anything — live reader Q&amp;A</h3>
-            <p class="event-venue" data-en="Instagram Live · 8:00 PM EET" data-gr="Instagram Live · 8:00 μ.μ.">Instagram Live · 8:00 PM EET</p>
+          <p class="book-blurb">Mocked by everyone and understood only by the infinite universe, a visionary teaches rockets to land on their tails and sets sail for Mars. But when Fabian and the first colonists break ground on the red planet, they find tunnels never carved by human hands — the remains of an ancient civilization, older than any question mankind has asked.</p>
+          <p class="book-blurb">And among the relics, a seed the old stories called <em>ambrosia</em> — bitter fruit of the gods, which only one small boy will dare to eat. Humanity came to Mars to build its second home. Something was already waiting.</p>
+          <blockquote class="book-quote">"He felt that only the infinite universe understood him."<cite>— The Second Colony, Prologue</cite></blockquote>
+          <div class="book-actions">
+            <a href="colony.html" class="btn btn-solid btn-sm">Enter the World</a>
+            <button class="btn btn-ghost btn-sm" data-modal="modal-colony">Read an Excerpt</button>
+            <!-- TODO: Replace with your Lemon Squeezy product link -->
+            <a href="https://YOURSTORE.lemonsqueezy.com/buy/PRODUCT-ID-COLONY?embed=1" class="lemonsqueezy-button btn btn-ghost btn-sm">Buy the Book</a>
           </div>
-          <span class="event-chip event-chip--online" data-en="Online" data-gr="Διαδικτυακά">Online</span>
-        </article>
-
-        <article class="event-row reveal reveal-delay-2">
-          <div class="event-date" aria-hidden="true"><span class="event-day">21</span><span class="event-month" data-en="MAY" data-gr="ΜΑΪ">MAY</span></div>
-          <div class="event-info">
-            <h3 class="event-title font-serif italic" data-en="Thessaloniki International Book Fair" data-gr="Διεθνής Έκθεση Βιβλίου Θεσσαλονίκης">Thessaloniki International Book Fair</h3>
-            <p class="event-venue" data-en="Signing &amp; panel · details to come" data-gr="Υπογραφές &amp; πάνελ · λεπτομέρειες σύντομα">Signing &amp; panel · details to come</p>
+          <div class="chapters">
+            <button class="chapters-toggle" aria-expanded="false">Inside the book — 9 chapters <span class="chev">▾</span></button>
+            <div class="chapters-list">
+              <ol>
+                <li><b>1</b> The Visionary</li>
+                <li><b>2</b> The Launch</li>
+                <li><b>3</b> First Steps on Mars</li>
+                <li><b>4</b> Underground Mysteries</li>
+                <li><b>5</b> The Ancient Civilization</li>
+                <li><b>6</b> Discoveries and Dilemmas</li>
+                <li><b>7</b> Humanity's Legacy</li>
+                <li><b>8</b> The Cosmic Question</li>
+                <li><b>9</b> A New Beginning</li>
+              </ol>
+            </div>
           </div>
-          <span class="event-chip" data-en="In person" data-gr="Με φυσική παρουσία">In person</span>
-        </article>
-      </div>
-
-      <p class="text-muted text-sm mt-8 reveal" data-en="Organising a reading, festival, or podcast? I travel well and talk too much about semicolons." data-gr="Οργανώνετε ανάγνωση, φεστιβάλ ή podcast; Ταξιδεύω εύκολα και μιλάω υπερβολικά για τα ερωτηματικά.">
-        Organising a reading, festival, or podcast? I travel well and talk too much about semicolons.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       PRESS / MEDIA KIT
-  ══════════════════════════════════════════ -->
-  <section id="press" class="py-20 sm:py-28 bg-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-
-      <div class="mb-10 sm:mb-14 reveal">
-        <span class="section-numeral">VI.</span>
-        <p class="eyebrow mb-4" data-en="For Press" data-gr="Για τον Τύπο">For Press</p>
-        <h2 class="section-title" data-en="Media Kit" data-gr="Υλικό Τύπου">Media Kit</h2>
-        <p class="text-muted text-base max-w-xl mt-4" data-en="Everything a journalist, podcaster, or event organiser needs — no emails required." data-gr="Ό,τι χρειάζεται ένας δημοσιογράφος, podcaster ή διοργανωτής — χωρίς να χρειαστεί email.">
-          Everything a journalist, podcaster, or event organiser needs — no emails required.
-        </p>
-      </div>
-
-      <div class="press-kit-grid">
-        <article class="press-kit-card reveal">
-          <p class="tile-label" data-en="Short bio" data-gr="Σύντομο βιογραφικό">Short bio</p>
-          <p id="press-bio" class="press-bio" data-en="Derek is a bilingual author of literary fiction, essays, and short stories. His three books — The Weight of Silence, Letters to No One, and Before the Light Fades — explore memory, language, and identity across the Mediterranean. He writes in English and Greek, and lives between Athens and the road." data-gr="Ο Derek είναι δίγλωσσος συγγραφέας λογοτεχνικής πεζογραφίας, δοκιμίων και διηγημάτων. Τα τρία βιβλία του — Το Βάρος της Σιωπής, Γράμματα σε Κανέναν και Πριν Σβήσει το Φως — εξερευνούν τη μνήμη, τη γλώσσα και την ταυτότητα στη Μεσόγειο. Γράφει στα Αγγλικά και τα Ελληνικά, και ζει μεταξύ Αθήνας και δρόμου.">
-            Derek is a bilingual author of literary fiction, essays, and short stories. His three books — The Weight of Silence, Letters to No One, and Before the Light Fades — explore memory, language, and identity across the Mediterranean. He writes in English and Greek, and lives between Athens and the road.
-          </p>
-          <button id="copy-bio" class="press-btn" data-en="Copy bio" data-gr="Αντιγραφή βιογραφικού">Copy bio</button>
-        </article>
-
-        <article class="press-kit-card reveal reveal-delay-1">
-          <p class="tile-label" data-en="Assets" data-gr="Υλικό">Assets</p>
-          <ul class="press-assets">
-            <li><a href="assets/images/author.webp" download="derek-author-photo.webp" class="press-link" data-en="Author photo (web) ↓" data-gr="Φωτογραφία συγγραφέα ↓">Author photo (web) ↓</a></li>
-            <li><span class="text-muted text-sm" data-en="High-res photos &amp; covers on request" data-gr="Φωτογραφίες υψηλής ανάλυσης κατόπιν αιτήματος">High-res photos &amp; covers on request</span></li>
-          </ul>
-          <p class="tile-label mt-5" data-en="Fast facts" data-gr="Με μια ματιά">Fast facts</p>
-          <ul class="press-facts">
-            <li data-en="3 books · 4,000+ readers · 12 countries" data-gr="3 βιβλία · 4.000+ αναγνώστες · 12 χώρες">3 books · 4,000+ readers · 12 countries</li>
-            <li data-en="Writes in English &amp; Greek" data-gr="Γράφει στα Αγγλικά &amp; Ελληνικά">Writes in English &amp; Greek</li>
-            <li data-en="Based in Athens, Greece" data-gr="Έδρα: Αθήνα">Based in Athens, Greece</li>
-          </ul>
-        </article>
-
-        <article class="press-kit-card reveal reveal-delay-2">
-          <p class="tile-label" data-en="Talk to me about" data-gr="Θέματα συζήτησης">Talk to me about</p>
-          <ul class="press-facts">
-            <li data-en="Writing between two languages" data-gr="Η γραφή ανάμεσα σε δύο γλώσσες">Writing between two languages</li>
-            <li data-en="Memory &amp; place in fiction" data-gr="Μνήμη &amp; τόπος στη λογοτεχνία">Memory &amp; place in fiction</li>
-            <li data-en="Publishing directly to readers" data-gr="Απευθείας έκδοση στους αναγνώστες">Publishing directly to readers</li>
-          </ul>
-          <p class="tile-label mt-5" data-en="Press contact" data-gr="Επικοινωνία τύπου">Press contact</p>
-          <a href="mailto:press@derek.com" class="press-link">press@derek.com</a>
-        </article>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       Q&A TEASER
-  ══════════════════════════════════════════ -->
-  <section id="qa" class="py-16 sm:py-20 bg-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <a href="faq.html" class="qa-promo reveal">
-        <div class="qa-promo-text">
-          <span class="section-numeral">VII.</span>
-          <p class="eyebrow mb-4" data-en="Q&amp;A" data-gr="Ερωτήσεις">Q&amp;A</p>
-          <h2 class="font-serif italic text-3xl md:text-4xl text-text leading-tight mb-3" data-en="Have a question?" data-gr="Έχετε μια ερώτηση;">
-            Have a question?
-          </h2>
-          <p class="text-muted text-base max-w-xl" data-en="Formats, downloads, how to read on iOS or Android — answers to the questions readers ask most." data-gr="Μορφές, λήψεις, πώς να διαβάσετε σε iOS ή Android — απαντήσεις στις πιο συχνές ερωτήσεις των αναγνωστών.">
-            Formats, downloads, how to read on iOS or Android — answers to the questions readers ask most.
-          </p>
-        </div>
-        <span class="qa-promo-cta" data-en="Read Q&amp;A →" data-gr="Διαβάστε →">Read Q&amp;A →</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       NEWSLETTER
-  ══════════════════════════════════════════ -->
-  <section id="newsletter" class="py-16 sm:py-24 bg-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="newsletter-band reveal">
-        <p class="eyebrow mb-4" data-en="Newsletter" data-gr="Ενημερωτικό Δελτίο">Newsletter</p>
-        <h2 class="font-serif italic text-3xl md:text-4xl text-text mb-3" data-en="Letters, occasionally." data-gr="Γράμματα, πού και πού.">
-          Letters, occasionally.
-        </h2>
-        <p class="text-muted text-base max-w-md mx-auto mb-8" data-en="One letter a month on writing, memory, and whatever is in progress. Subscribers also get The Lamplighter — a short story published nowhere else. No noise, ever." data-gr="Ένα γράμμα τον μήνα για τη γραφή, τη μνήμη και ό,τι βρίσκεται σε εξέλιξη. Οι συνδρομητές λαμβάνουν και τον Φαροφύλακα — ένα διήγημα που δεν κυκλοφορεί πουθενά αλλού. Χωρίς θόρυβο, ποτέ.">
-          One letter a month on writing, memory, and whatever is in progress. Subscribers also get The Lamplighter — a short story published nowhere else. No noise, ever.
-        </p>
-        <!-- TODO: Replace action with your Substack / Buttondown / Formspree endpoint -->
-        <form id="newsletter-form" action="YOUR_NEWSLETTER_ENDPOINT" method="POST" class="newsletter-form">
-          <label for="nl-email" class="sr-only" data-en="Email address" data-gr="Διεύθυνση email">Email address</label>
-          <input type="email" id="nl-email" name="email" required class="newsletter-input" placeholder="you@example.com" autocomplete="email" />
-          <button type="submit" class="btn-primary" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
-        </form>
-        <p id="nl-success" class="hidden text-accent text-sm mt-4" data-en="Welcome — the first letter is on its way." data-gr="Καλώς ήρθατε — το πρώτο γράμμα είναι καθ' οδόν.">
-          Welcome — the first letter is on its way.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       CONTACT SECTION
-  ══════════════════════════════════════════ -->
-  <section id="contact" class="py-20 sm:py-28 bg-bg">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8">
-      <div class="ornament-divider reveal" aria-hidden="true">
-        <span class="ornament-line"></span>
-        <span class="ornament-glyph">&#10086;</span>
-        <span class="ornament-line"></span>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-
-      <!-- Left -->
-      <div class="reveal">
-        <span class="section-numeral">VIII.</span>
-        <p class="eyebrow mb-4" data-en="Contact" data-gr="Επικοινωνία">Contact</p>
-        <h2 class="section-title mb-5 sm:mb-6" data-en="Get in Touch" data-gr="Επικοινωνήστε">Get in Touch</h2>
-        <p class="text-muted leading-relaxed mb-6 sm:mb-8 max-w-sm" data-en="For press inquiries, speaking events, or reader messages." data-gr="Για δημοσιογραφικές ερωτήσεις, ομιλίες ή μηνύματα αναγνωστών.">
-          For press inquiries, speaking events, or reader messages.
-        </p>
-
-        <a href="mailto:hello@derek.com" class="block text-accent text-sm mb-6 hover:underline break-all">hello@derek.com</a>
-
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <!-- Replace # with actual social URLs -->
-          <a href="#" class="social-link" data-en="Instagram" data-gr="Instagram">Instagram</a>
-          <span class="text-border">·</span>
-          <a href="#" class="social-link" data-en="Goodreads" data-gr="Goodreads">Goodreads</a>
-          <span class="text-border">·</span>
-          <a href="#" class="social-link" data-en="Substack" data-gr="Substack">Substack</a>
         </div>
       </div>
+    </section>
 
-      <!-- Form -->
-      <form id="contact-form" action="YOUR_FORMSPREE_URL" method="POST" class="contact-form reveal reveal-delay-1">
-        <div class="form-group">
-          <label for="name" data-en="Name" data-gr="Όνομα">Name</label>
-          <input type="text" id="name" name="name" required placeholder="" />
+    <!-- ══ BOOK · SHADOWS AND DECEIT ══ -->
+    <section id="noir" class="section book noir">
+      <div class="wrap book-grid">
+        <div class="book-cover reveal" data-dir="left">
+          <div class="cover-glow" aria-hidden="true"></div>
+          <div class="cover-frame">
+            <svg viewBox="0 0 400 600" role="img" aria-label="Shadows and Deceit by Derek Robotis — a detective under a street lamp in a neon-lit city"><use href="#cover-noir"/></svg>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email" data-en="Email" data-gr="Email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="" />
+        <div class="book-info reveal" data-dir="right">
+          <div class="book-no" aria-hidden="true">03</div>
+          <span class="book-series">The Streets of Pythos</span>
+          <h2 class="book-title">Shadows <span style="font-style:italic">and</span> Deceit</h2>
+          <div class="book-tags">
+            <span class="tag">Sci-Fi Noir</span><span class="tag">Detective</span><span class="tag">Alien Symbiont</span>
+          </div>
+          <p class="book-blurb">Private detective Bill has a leaky office on the smog-choked planet Pythos, a secretary he can't quite figure out, and an alien symbiont named Justin living in his head — a detective in his own world, made wise by eons among the stars.</p>
+          <p class="book-blurb">When the Commissioner walks in with a case that's strictly off the record, Bill is dragged from the neon streets of Pythos into a conspiracy of vanished executives, F.T.L. secrets, and doppelgangers from another universe — where every face might belong to someone else, and every answer depends on who's asking.</p>
+          <blockquote class="book-quote">"I know that truth is a matter of perspective."<cite>— Shadows and Deceit</cite></blockquote>
+          <div class="book-actions">
+            <a href="shadows.html" class="btn btn-solid btn-sm">Enter the World</a>
+            <button class="btn btn-ghost btn-sm" data-modal="modal-noir">Read an Excerpt</button>
+            <!-- TODO: Replace with your Lemon Squeezy product link -->
+            <a href="https://YOURSTORE.lemonsqueezy.com/buy/PRODUCT-ID-SHADOWS?embed=1" class="lemonsqueezy-button btn btn-ghost btn-sm">Buy the Book</a>
+          </div>
+          <div class="chapters">
+            <button class="chapters-toggle" aria-expanded="false">Inside the book — 9 chapters <span class="chev">▾</span></button>
+            <div class="chapters-list">
+              <ol>
+                <li><b>1</b> Bill's Routine</li>
+                <li><b>2</b> The Commissioner's Visit</li>
+                <li><b>3</b> A Gritty Investigation</li>
+                <li><b>4</b> The Symbiont's Memories</li>
+                <li><b>5</b> The Streets of Pythos</li>
+                <li><b>6</b> Secrets Unveiled</li>
+                <li><b>7</b> A Trap Set</li>
+                <li><b>8</b> Escape to Mandra</li>
+                <li><b>9</b> New Horizons</li>
+              </ol>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="message" data-en="Message" data-gr="Μήνυμα">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder=""></textarea>
-        </div>
-        <button type="submit" class="btn-primary w-full justify-center" data-en="Send Message" data-gr="Αποστολή Μηνύματος">
-          Send Message
-        </button>
-        <p id="form-success" class="hidden text-accent text-sm text-center mt-4" data-en="Thank you! Your message has been sent." data-gr="Ευχαριστώ! Το μήνυμά σας στάλθηκε.">
-          Thank you! Your message has been sent.
-        </p>
-      </form>
+      </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ══ BOOK · THE PYRAMID OF ISIDA ══ -->
+    <section id="isida" class="section book isida flip">
+      <div class="wrap book-grid">
+        <div class="book-cover reveal" data-dir="right">
+          <div class="cover-glow" aria-hidden="true"></div>
+          <div class="cover-frame">
+            <svg viewBox="0 0 400 600" role="img" aria-label="The Pyramid of Isida by Derek Robotis — a glowing pyramid at Marathon under the night sky"><use href="#cover-isida"/></svg>
+          </div>
+        </div>
+        <div class="book-info reveal" data-dir="left">
+          <div class="book-no" aria-hidden="true">04</div>
+          <span class="book-series">A Door Through Time</span>
+          <h2 class="book-title">The Pyramid of Isida</h2>
+          <div class="book-tags">
+            <span class="tag">Archaeology</span><span class="tag">Greek Myth</span><span class="tag">Time Travel</span>
+          </div>
+          <p class="book-blurb">Archaeologist Aristides has heard the myth all his life: that Herodes Atticus, returning from Egypt, raised a pyramid at Marathon in honor of the goddess Isida. When the Academy votes down the dig, he and his colleague Andromache go anyway — and beneath the soil of Attica they find an empty sarcophagus, and a door that does not open onto a chamber, but onto another era.</p>
+          <p class="book-blurb">From the People's Assembly to the waters of Hades, from the kiss of death to the song of the siren, Aristides must survive a world that remembers the gods — and find his way back to his own time.</p>
+          <blockquote class="book-quote">"Without the past there is no future. Whoever doesn't possess the knowledge of his heritage is doomed to have limited awareness of oneself."<cite>— The Pyramid of Isida, Chapter 1</cite></blockquote>
+          <div class="book-actions">
+            <a href="isida.html" class="btn btn-solid btn-sm">Enter the World</a>
+            <button class="btn btn-ghost btn-sm" data-modal="modal-isida">Read an Excerpt</button>
+            <!-- TODO: Replace with your Lemon Squeezy product link -->
+            <a href="https://YOURSTORE.lemonsqueezy.com/buy/PRODUCT-ID-ISIDA?embed=1" class="lemonsqueezy-button btn btn-ghost btn-sm">Buy the Book</a>
+          </div>
+          <div class="chapters">
+            <button class="chapters-toggle" aria-expanded="false">Inside the book — 10 chapters <span class="chev">▾</span></button>
+            <div class="chapters-list">
+              <ol>
+                <li><b>1</b> The Visit</li>
+                <li><b>2</b> The Empty Sarcophagus</li>
+                <li><b>3</b> The King's Death</li>
+                <li><b>4</b> The People's Assembly</li>
+                <li><b>5</b> The Desert's Aura</li>
+                <li><b>6</b> The Kiss of Death</li>
+                <li><b>7</b> Hades' Water</li>
+                <li><b>8</b> The Meeting of Nicaea</li>
+                <li><b>9</b> The Position of Constantia</li>
+                <li><b>10</b> The Fall and the Salvation</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ══ ONE UNIVERSE ══ -->
+    <section id="universe" class="section universe">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">One Universe</span>
+          <h2 class="section-title">The Worlds Are Connected</h2>
+          <p class="section-sub">A boy who eats the fruit of the gods. A tree that shouldn't exist. A detective who dreams another being's memories. Hover a star to follow the thread.</p>
+        </div>
+        <div class="constellation-wrap reveal">
+          <svg viewBox="0 0 800 440" aria-label="Constellation map connecting the four books">
+            <defs>
+              <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fff" stop-opacity=".9"/>
+                <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- background stars -->
+            <g fill="#eae7dc" opacity=".5">
+              <circle cx="90" cy="60" r="1.2" class="twinkle"/><circle cx="300" cy="40" r="1" class="twinkle t2"/>
+              <circle cx="520" cy="70" r="1.4" class="twinkle t3"/><circle cx="720" cy="150" r="1"/>
+              <circle cx="60" cy="220" r="1" class="twinkle t2"/><circle cx="750" cy="300" r="1.2" class="twinkle"/>
+              <circle cx="240" cy="400" r="1"/><circle cx="430" cy="60" r="1" class="twinkle t3"/>
+              <circle cx="560" cy="410" r="1.2" class="twinkle t2"/><circle cx="360" cy="390" r="1"/>
+            </g>
+            <!-- threads -->
+            <g stroke-width="1.2" fill="none" opacity=".55">
+              <line x1="160" y1="120" x2="400" y2="220" stroke="#e8c56b" class="constellation-line"/>
+              <line x1="640" y1="100" x2="400" y2="220" stroke="#ff6b3d" class="constellation-line"/>
+              <line x1="630" y1="340" x2="400" y2="220" stroke="#35e0c8" class="constellation-line"/>
+              <line x1="170" y1="340" x2="400" y2="220" stroke="#d9a441" class="constellation-line"/>
+              <line x1="160" y1="120" x2="640" y2="100" stroke="#8a8778" class="constellation-line" opacity=".35"/>
+              <line x1="640" y1="100" x2="630" y2="340" stroke="#8a8778" class="constellation-line" opacity=".35"/>
+              <line x1="170" y1="340" x2="160" y2="120" stroke="#8a8778" class="constellation-line" opacity=".35"/>
+            </g>
+            <!-- nodes -->
+            <g class="constellation-node" data-world="tree" tabindex="0" role="button" aria-label="The Tree">
+              <circle class="halo" cx="160" cy="120" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="160" cy="120" r="9" fill="#e8c56b"/>
+              <text x="160" y="80" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Tree</text>
+            </g>
+            <g class="constellation-node" data-world="colony" tabindex="0" role="button" aria-label="The Second Colony">
+              <circle class="halo" cx="640" cy="100" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="640" cy="100" r="9" fill="#ff6b3d"/>
+              <text x="640" y="60" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Second Colony</text>
+            </g>
+            <g class="constellation-node" data-world="noir" tabindex="0" role="button" aria-label="Shadows and Deceit">
+              <circle class="halo" cx="630" cy="340" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="630" cy="340" r="9" fill="#35e0c8"/>
+              <text x="630" y="385" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">Shadows and Deceit</text>
+            </g>
+            <g class="constellation-node" data-world="isida" tabindex="0" role="button" aria-label="The Pyramid of Isida">
+              <circle class="halo" cx="170" cy="340" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="170" cy="340" r="9" fill="#d9a441"/>
+              <text x="170" y="385" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Pyramid of Isida</text>
+            </g>
+            <g class="constellation-node" data-world="center" tabindex="0" role="button" aria-label="One Universe">
+              <circle class="halo" cx="400" cy="220" r="34" fill="url(#node-glow)" opacity=".5"/>
+              <circle class="core" cx="400" cy="220" r="12" fill="#eae7dc"/>
+              <text x="400" y="262" text-anchor="middle" fill="#a7a49b" font-size="13" font-family="Inter, sans-serif" letter-spacing="3">ONE UNIVERSE</text>
+            </g>
+          </svg>
+        </div>
+        <div class="universe-note reveal" id="universe-note">
+          <h3>One Universe</h3>
+          <p>Four books, one thread: humanity reaching past its limits — up to the stars, down into the earth, back through time — and finding that something was always reaching back.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ AUTHOR ══ -->
+    <section id="author" class="section">
+      <div class="wrap">
+        <div class="author-grid">
+          <div class="author-photo reveal" data-dir="left">
+            <img src="assets/images/author.webp" alt="Derek Robotis, author" width="680" height="850" loading="lazy" decoding="async" />
+          </div>
+          <div class="author-text reveal" data-dir="right">
+            <span class="eyebrow">The Author</span>
+            <h2>Between Marathon and Mars</h2>
+            <p>Derek Robotis writes at the crossroads where Greek myth meets deep space. His stories begin in familiar places — a school attic, an archaeologist's office in Athens, a cramped detective agency — and end among ancient civilizations, talking stars, and doors through time.</p>
+            <p>Whether he's following a boy's telescope to the tree of life, digging beneath Marathon for the goddess Isida, or walking the smog-choked streets of Pythos with a detective and his symbiont, one conviction runs through every page: <em>without the past there is no future</em> — and the future is written in the stars.</p>
+            <p class="author-sign">Derek Robotis</p>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><b>4</b><span>Books</span></div>
+          <div class="stat reveal" style="transition-delay:.08s"><b>37</b><span>Chapters</span></div>
+          <div class="stat reveal" style="transition-delay:.16s"><b>1</b><span>Connected Universe</span></div>
+          <div class="stat reveal" style="transition-delay:.24s"><b>∞</b><span>Worlds to Visit</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONTACT ══ -->
+    <section id="contact" class="section contact">
+      <div class="wrap reveal">
+        <span class="eyebrow">Stay in Orbit</span>
+        <h2 class="section-title">The Story Continues</h2>
+        <p class="section-sub" style="max-width:520px;margin:16px auto 0">New chapters, new worlds, and news from the universe of Derek Robotis — straight to your inbox.</p>
+        <!-- TODO: Replace with your real contact / newsletter address -->
+        <a class="btn btn-solid" href="mailto:kwnstantinos.regklis@gmail.com?subject=Message%20for%20Derek%20Robotis">Write to the Author</a>
+        <p class="contact-mail">or email directly: <a href="mailto:kwnstantinos.regklis@gmail.com">kwnstantinos.regklis@gmail.com</a></p>
+      </div>
+    </section>
   </main>
 
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
-  <footer class="bg-surface border-t border-border py-8 sm:py-10">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-      <div>
-        <p class="font-serif font-bold text-lg text-text mb-1">Derek</p>
-        <p class="text-muted text-xs" data-en="© 2024 Derek. All rights reserved." data-gr="© 2024 Derek. Όλα τα δικαιώματα διατηρούνται.">
-          © 2024 Derek. All rights reserved.
-        </p>
-      </div>
-      <nav class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted" aria-label="Footer">
-        <a href="#books"  class="hover:text-accent transition-colors" data-en="Books" data-gr="Βιβλία">Books</a>
-        <a href="#events" class="hover:text-accent transition-colors" data-en="Events" data-gr="Εκδηλώσεις">Events</a>
-        <a href="#press"  class="hover:text-accent transition-colors" data-en="Press Kit" data-gr="Υλικό Τύπου">Press Kit</a>
-        <a href="faq.html" class="hover:text-accent transition-colors" data-en="Q&amp;A" data-gr="Ερωτήσεις">Q&amp;A</a>
-        <a href="privacy.html" class="hover:text-accent transition-colors" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</a>
-        <a href="terms.html"   class="hover:text-accent transition-colors" data-en="Terms & Conditions" data-gr="Όροι &amp; Προϋποθέσεις">Terms &amp; Conditions</a>
-      </nav>
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p class="footer-quote">"Without the past there is no future."</p>
+      <small>© <span id="year">2026</span> Derek Robotis. All rights reserved.</small>
     </div>
   </footer>
 
-  <!-- ══════════════════════════════════════════
-       BOOK PREVIEW MODAL
-  ══════════════════════════════════════════ -->
-  <div id="book-modal" class="book-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bm-title">
-    <div class="book-modal-overlay" data-close></div>
-    <div class="book-modal-panel" role="document">
-      <button class="book-modal-close" data-close aria-label="Close preview">&#215;</button>
-      <div class="book-modal-grid">
-        <!-- 3D flip book -->
-        <div class="bm-book-wrap">
-          <div class="bm-book" id="bm-book">
-            <div class="bm-book-face bm-book-front">
-              <div class="accent-line"></div>
-              <p class="bm-cover-title font-serif italic" id="bm-cover-title"></p>
-              <p class="author-label">Derek</p>
-              <span class="wax-seal" aria-hidden="true">D</span>
-            </div>
-            <div class="bm-book-face bm-book-back">
-              <p class="bm-back-text" id="bm-back-text"></p>
-            </div>
-          </div>
-          <button class="bm-flip" id="bm-flip" data-en="Flip ↻" data-gr="Γύρνα ↻">Flip ↻</button>
-        </div>
-        <!-- Details + excerpt -->
-        <div class="bm-detail">
-          <p class="genre-label" id="bm-genre"></p>
-          <h3 class="font-serif italic" id="bm-title"></h3>
-          <div class="bm-meta" id="bm-meta"></div>
-          <p class="bm-excerpt-label" data-en="From the opening pages" data-gr="Από τις πρώτες σελίδες">From the opening pages</p>
-          <div class="bm-excerpt" id="bm-excerpt"></div>
-          <a href="#" class="lemonsqueezy-button buy-btn bm-buy" id="bm-buy" data-en="Buy Now" data-gr="Αγορά">Buy Now</a>
-        </div>
+  <!-- ══ BACK TO TOP ══ -->
+  <button class="to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 2c2.6 1.8 4 4.6 4 8l-1.2 5H9.2L8 10c0-3.4 1.4-6.2 4-8Z" fill="#e8c56b"/>
+      <circle cx="12" cy="9" r="1.6" fill="#05060c"/>
+      <path d="M8.4 13.5 6 17l3-.6M15.6 13.5 18 17l-3-.6" stroke="#e8c56b" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M12 15.6v4" stroke="#ff9e4f" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <!-- ══ EXCERPT MODALS ══ -->
+  <div class="modal book tree" id="modal-tree" role="dialog" aria-modal="true" aria-labelledby="modal-tree-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close excerpt">✕</button>
+      <span class="modal-eyebrow">Excerpt · The Tree</span>
+      <h3 class="modal-title" id="modal-tree-title">The Attic Window</h3>
+      <div class="modal-body">
+        <p>Harry at school is one of those kids who spends a lot of time alone. He divides his time between his lessons and the small telescope his father had bought him — probably the best present they had ever given him. Looking up at the stars, he felt like he belonged to another world, far from Earth; a feeling inexplicably familiar.</p>
+        <p>In the evenings, when the sky was clearer, he spent many hours looking at the constellations — Orion, Sagittarius. The small window in the attic was the bridge to the infinite universe, where he gathered his thoughts and dreams which found a foothold in another cosmic dimension. Often he would fall asleep on the window ledge while gazing at the stars.</p>
+        <p>He saw a tree with green leaves. Not only did he discover a new planet — he discovered life on it. A tree, nothing else. But it was the tree of life on another heavenly body. Life is pervasive in the universe. What mysteries did it hide?</p>
       </div>
+      <p class="modal-src">From The Tree — Derek Robotis</p>
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=complete-5"></script>
+  <div class="modal book colony" id="modal-colony" role="dialog" aria-modal="true" aria-labelledby="modal-colony-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close excerpt">✕</button>
+      <span class="modal-eyebrow">Excerpt · The Second Colony</span>
+      <h3 class="modal-title" id="modal-colony-title">The Visionary</h3>
+      <div class="modal-body">
+        <p>From the dawn of his history, man has wondered where he has come from. Perhaps this has always been the age-old question — this primal feeling from the moment we realized we existed. The beginning of the journey, of knowledge itself. A point that stood as a springboard to begin, as a species, the journey to the stars.</p>
+        <p>As a young boy he had dreamed of reaching the stars, and his dream was to get up there at any cost. His success was not a road full of rose petals. There were times when everyone mocked him. It was just him against everyone. He felt that only the infinite universe understood him.</p>
+        <p>A hopeless effort to achieve the impossible: to take off a rocket and then land it vertically. And yet he did it. After that moment, nothing stood in his way. The mast had set sail for roads unknown — star ports where instead of sand and sea they would be joined by planets and moons.</p>
+      </div>
+      <p class="modal-src">From The Second Colony — Derek Robotis</p>
+    </div>
+  </div>
+
+  <div class="modal book noir" id="modal-noir" role="dialog" aria-modal="true" aria-labelledby="modal-noir-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close excerpt">✕</button>
+      <span class="modal-eyebrow">Excerpt · Shadows and Deceit</span>
+      <h3 class="modal-title" id="modal-noir-title">The Streets of Pythos</h3>
+      <div class="modal-body">
+        <p>For some reason, the city was unusually gloomy. The pollution was at its highest — you could feel it in the air that you breathed. The F.T.L. drives had spawned suddenly, causing a migration never seen in the galaxy before. Pythos, the planet we are on, had over ten races living on it.</p>
+        <p>My symbiont, during my sleep, chooses to show me images of the worlds it has visited. In his world he was somewhat a detective too. It's weird to have all these memories and not know how they can assist me.</p>
+        <p>As soon as we dropped out of F.T.L., the station appeared in all its might — millions of tons spinning to create artificial gravity, a gateway to the galaxy. You will find merchants, people trying to cut a deal for a better life, and people like me: trying to solve a case and find the elusive truth. I know that truth is a matter of perspective.</p>
+      </div>
+      <p class="modal-src">From Shadows and Deceit — Derek Robotis</p>
+    </div>
+  </div>
+
+  <div class="modal book isida" id="modal-isida" role="dialog" aria-modal="true" aria-labelledby="modal-isida-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close excerpt">✕</button>
+      <span class="modal-eyebrow">Excerpt · The Pyramid of Isida</span>
+      <h3 class="modal-title" id="modal-isida-title">The Visit</h3>
+      <div class="modal-body">
+        <p>Archaeological sites in Greece could be better cared for. It is said that cutbacks should be made; that emphasis should be given to the country's present day, and the past left to its destiny. Without the past there is no future. Whoever doesn't possess the knowledge of his heritage is doomed to have limited awareness of oneself.</p>
+        <p>There has been great interest in the fact that in the area of Marathon there is an archaeological site dedicated to Isida. The myth mentions that Herodes Atticus, after a trip to Egypt, decided that he should build a pyramid in honor of the goddess. It has intrigued me for quite a while now. I have to find the truth.</p>
+        <p>The night before the decision was made, a strange presence came to me in my sleep.</p>
+      </div>
+      <p class="modal-src">From The Pyramid of Isida — Derek Robotis</p>
+    </div>
+  </div>
+
+  <!-- ══ COVER ART (SVG symbols, referenced above) ══ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+
+      <!-- ── THE TREE ── -->
+      <symbol id="cover-tree" viewBox="0 0 400 600">
+        <defs>
+          <linearGradient id="tr-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#060a1e"/><stop offset=".55" stop-color="#0c1440"/><stop offset="1" stop-color="#131b52"/>
+          </linearGradient>
+          <radialGradient id="tr-neb1" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#c33e8f" stop-opacity=".55"/><stop offset="1" stop-color="#c33e8f" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="tr-neb2" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#2e6ee8" stop-opacity=".5"/><stop offset="1" stop-color="#2e6ee8" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="tr-treeglow" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#ffdf9e" stop-opacity=".85"/><stop offset="1" stop-color="#ffdf9e" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="tr-beam" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#9fd8ff" stop-opacity=".5"/><stop offset="1" stop-color="#9fd8ff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="tr-ground" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1a1430"/><stop offset="1" stop-color="#080614"/>
+          </linearGradient>
+          <filter id="tr-soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+        </defs>
+        <rect width="400" height="600" fill="url(#tr-sky)"/>
+        <ellipse cx="110" cy="150" rx="150" ry="120" fill="url(#tr-neb1)"/>
+        <ellipse cx="300" cy="110" rx="160" ry="130" fill="url(#tr-neb2)"/>
+        <!-- stars -->
+        <g fill="#fff">
+          <circle cx="40" cy="60" r="1.4" class="twinkle"/><circle cx="120" cy="40" r="1" class="twinkle t2"/>
+          <circle cx="210" cy="70" r="1.6" class="twinkle t3"/><circle cx="330" cy="50" r="1.2" class="twinkle"/>
+          <circle cx="370" cy="140" r="1" class="twinkle t2"/><circle cx="60" cy="200" r="1.2" class="twinkle t3"/>
+          <circle cx="290" cy="190" r="1.4" class="twinkle"/><circle cx="150" cy="130" r="1"/>
+          <circle cx="250" cy="240" r="1" class="twinkle t2"/><circle cx="350" cy="280" r="1.2" class="twinkle t3"/>
+          <circle cx="30" cy="300" r="1"/><circle cx="90" cy="350" r="1.2" class="twinkle"/>
+        </g>
+        <!-- planets -->
+        <g class="float-slow">
+          <circle cx="200" cy="90" r="34" fill="#7fb2ff" opacity=".9"/>
+          <circle cx="200" cy="90" r="34" fill="#0c1440" opacity=".35"/>
+          <path d="M166 90a34 34 0 0 0 68 0" fill="#5b8fe0" opacity=".5"/>
+          <circle cx="285" cy="150" r="12" fill="#38406e"/>
+        </g>
+        <!-- light beam onto tree -->
+        <polygon points="185,110 215,110 245,430 155,430" fill="url(#tr-beam)"/>
+        <!-- ground / planet surface -->
+        <path d="M0 470 Q100 430 200 452 Q310 476 400 445 L400 600 L0 600 Z" fill="url(#tr-ground)"/>
+        <path d="M60 470 l14 -18 8 18 Z M320 458 l12 -16 8 16 Z" fill="#050410"/>
+        <!-- tree glow -->
+        <ellipse cx="200" cy="380" rx="120" ry="100" fill="url(#tr-treeglow)" filter="url(#tr-soft)" class="lamp-flicker"/>
+        <!-- trunk -->
+        <path d="M196 452 C194 420 190 400 178 384 M200 452 C200 415 202 398 200 380 M204 452 C207 421 212 402 224 386 M200 400 C188 388 178 380 168 376 M200 396 C212 386 224 378 234 374"
+              stroke="#c99b4e" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <path d="M200 452 C199 430 199 410 200 392" stroke="#e8c56b" stroke-width="9" stroke-linecap="round" fill="none"/>
+        <!-- foliage -->
+        <g fill="#ffe9ae">
+          <circle cx="200" cy="352" r="34" opacity=".95"/>
+          <circle cx="164" cy="366" r="22" opacity=".9"/>
+          <circle cx="238" cy="364" r="23" opacity=".9"/>
+          <circle cx="180" cy="336" r="20" opacity=".85"/>
+          <circle cx="222" cy="334" r="19" opacity=".85"/>
+          <circle cx="200" cy="320" r="15" opacity=".8"/>
+        </g>
+        <g fill="#fff8e0" opacity=".8">
+          <circle cx="192" cy="350" r="3"/><circle cx="214" cy="342" r="2.5"/><circle cx="172" cy="362" r="2.5"/>
+          <circle cx="232" cy="358" r="2.5"/><circle cx="204" cy="326" r="2"/>
+        </g>
+        <!-- title -->
+        <text x="200" y="510" text-anchor="middle" fill="#f2ead2" font-family="Cormorant Garamond, serif" font-size="20" letter-spacing="6">DEREK ROBOTIS</text>
+        <text x="200" y="556" text-anchor="middle" fill="#ffe9ae" font-family="Cormorant Garamond, serif" font-size="42" font-weight="600" letter-spacing="8">THE TREE</text>
+      </symbol>
+
+      <!-- ── THE SECOND COLONY ── -->
+      <symbol id="cover-colony" viewBox="0 0 400 600">
+        <defs>
+          <linearGradient id="co-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1c0505"/><stop offset=".5" stop-color="#611a10"/><stop offset="1" stop-color="#c74a1e"/>
+          </linearGradient>
+          <radialGradient id="co-sun" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#ffe9c4"/><stop offset=".55" stop-color="#ffb968" stop-opacity=".9"/><stop offset="1" stop-color="#ff8c42" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="co-ground" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#7d2a12"/><stop offset="1" stop-color="#3a1006"/>
+          </linearGradient>
+          <radialGradient id="co-tunnel" cx=".5" cy="1" r="1">
+            <stop offset="0" stop-color="#ffe2a8"/><stop offset=".45" stop-color="#e07a30" stop-opacity=".7"/><stop offset="1" stop-color="#1c0505" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="400" height="600" fill="url(#co-sky)"/>
+        <!-- moons -->
+        <circle cx="70" cy="80" r="18" fill="#3d1b18"/><circle cx="330" cy="60" r="10" fill="#57241c"/>
+        <g fill="#ffd9b0" opacity=".7">
+          <circle cx="150" cy="50" r="1.2" class="twinkle"/><circle cx="240" cy="80" r="1" class="twinkle t2"/>
+          <circle cx="300" cy="130" r="1.2" class="twinkle t3"/><circle cx="50" cy="150" r="1"/>
+        </g>
+        <!-- sun -->
+        <circle cx="200" cy="255" r="120" fill="url(#co-sun)"/>
+        <!-- mountains -->
+        <path d="M0 280 L70 200 L130 275 L180 235 L240 285 L300 215 L360 278 L400 240 L400 320 L0 320 Z" fill="#38100a"/>
+        <!-- habitat dome silhouette -->
+        <g fill="#170504">
+          <path d="M140 262 a60 38 0 0 1 120 0 Z"/>
+          <rect x="128" y="258" width="144" height="14" rx="4"/>
+          <rect x="188" y="206" width="4" height="22"/><circle cx="190" cy="204" r="3"/>
+          <rect x="222" y="214" width="3" height="16"/>
+          <rect x="150" y="240" width="10" height="6" fill="#ffb968"/>
+          <rect x="240" y="242" width="10" height="6" fill="#ffb968"/>
+        </g>
+        <!-- ships -->
+        <g fill="#1c0705" class="float-slow">
+          <ellipse cx="90" cy="180" rx="20" ry="7"/><ellipse cx="322" cy="160" rx="14" ry="5"/>
+          <circle cx="98" cy="178" r="1.6" fill="#7fd4ff"/>
+        </g>
+        <!-- ground -->
+        <rect x="0" y="300" width="400" height="300" fill="url(#co-ground)"/>
+        <path d="M0 305 Q120 292 220 304 Q320 315 400 300 L400 330 L0 330 Z" fill="#8a3113" opacity=".55"/>
+        <!-- underground strata -->
+        <path d="M0 380 Q140 366 260 380 Q340 389 400 378" fill="none" stroke="#2a0c04" stroke-width="4" opacity=".7"/>
+        <path d="M0 430 Q110 444 230 432 Q330 423 400 436" fill="none" stroke="#2a0c04" stroke-width="4" opacity=".6"/>
+        <circle cx="70" cy="480" r="7" fill="#2a0c04" opacity=".7"/><circle cx="340" cy="500" r="9" fill="#2a0c04" opacity=".7"/>
+        <circle cx="120" cy="560" r="6" fill="#2a0c04" opacity=".6"/>
+        <!-- tunnel -->
+        <g>
+          <path d="M78 600 Q80 448 200 440 Q320 448 322 600 Z" fill="#12040a"/>
+          <path d="M96 600 Q98 468 200 460 Q302 468 304 600" fill="none" stroke="#ff9e4f" stroke-width="6" opacity=".9" class="lamp-flicker"/>
+          <path d="M120 600 Q122 492 200 485 Q278 492 280 600" fill="none" stroke="#ffc27e" stroke-width="5" opacity=".75"/>
+          <path d="M146 600 Q148 516 200 511 Q252 516 254 600" fill="none" stroke="#ffdba8" stroke-width="4" opacity=".6"/>
+          <ellipse cx="200" cy="600" rx="60" ry="72" fill="url(#co-tunnel)"/>
+          <!-- figure in the light -->
+          <g fill="#12040a">
+            <circle cx="200" cy="540" r="7"/>
+            <path d="M193 549 h14 l4 30 h-6 l-2 19 h-6 l-2 -19 h-6 Z"/>
+          </g>
+        </g>
+        <!-- title -->
+        <text x="200" y="72" text-anchor="middle" fill="#fff3e0" font-family="Cormorant Garamond, serif" font-size="40" font-weight="600" letter-spacing="4">THE SECOND</text>
+        <text x="200" y="116" text-anchor="middle" fill="#fff3e0" font-family="Cormorant Garamond, serif" font-size="46" font-weight="700" letter-spacing="10">COLONY</text>
+        <text x="200" y="142" text-anchor="middle" fill="#ffd9b0" font-family="Cormorant Garamond, serif" font-size="16" letter-spacing="5">DEREK ROBOTIS</text>
+      </symbol>
+
+      <!-- ── SHADOWS AND DECEIT ── -->
+      <symbol id="cover-noir" viewBox="0 0 400 600">
+        <defs>
+          <linearGradient id="no-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#04090c"/><stop offset=".6" stop-color="#0a1519"/><stop offset="1" stop-color="#122228"/>
+          </linearGradient>
+          <radialGradient id="no-lamp" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#ffce7a" stop-opacity=".95"/><stop offset="1" stop-color="#ffce7a" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="no-lightcone" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffce7a" stop-opacity=".38"/><stop offset="1" stop-color="#ffce7a" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="no-fog" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#9fb8bd" stop-opacity="0"/><stop offset="1" stop-color="#9fb8bd" stop-opacity=".28"/>
+          </linearGradient>
+          <filter id="no-blur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <rect width="400" height="600" fill="url(#no-sky)"/>
+        <g fill="#cfe" opacity=".5">
+          <circle cx="60" cy="46" r="1" class="twinkle"/><circle cx="200" cy="30" r="1.2" class="twinkle t2"/><circle cx="340" cy="56" r="1" class="twinkle t3"/>
+        </g>
+        <!-- far skyline -->
+        <g fill="#0d181d">
+          <rect x="0" y="200" width="42" height="260"/><rect x="46" y="150" width="38" height="310"/>
+          <rect x="88" y="230" width="30" height="230"/><rect x="122" y="120" width="44" height="340"/>
+          <rect x="230" y="140" width="40" height="320"/><rect x="274" y="220" width="30" height="240"/>
+          <rect x="308" y="100" width="46" height="360"/><rect x="358" y="180" width="42" height="280"/>
+          <polygon points="144,120 144,86 148,86 148,74 152,86 156,86 156,120"/>
+          <polygon points="326,100 331,64 336,100"/>
+        </g>
+        <!-- neon beam tower -->
+        <rect x="196" y="90" width="26" height="370" fill="#0d181d"/>
+        <rect x="207" y="40" width="4" height="120" fill="#35e0c8" opacity=".9" class="lamp-flicker"/>
+        <!-- windows -->
+        <g fill="#35e0c8" opacity=".8">
+          <rect x="52" y="170" width="5" height="7"/><rect x="64" y="190" width="5" height="7"/><rect x="52" y="230" width="5" height="7"/>
+          <rect x="130" y="150" width="6" height="8"/><rect x="146" y="180" width="6" height="8"/><rect x="130" y="220" width="6" height="8"/>
+          <rect x="238" y="170" width="6" height="8"/><rect x="252" y="200" width="6" height="8"/><rect x="238" y="250" width="6" height="8"/>
+          <rect x="318" y="130" width="6" height="8"/><rect x="334" y="160" width="6" height="8"/><rect x="318" y="210" width="6" height="8"/>
+        </g>
+        <g fill="#ffb02e" opacity=".75">
+          <rect x="10" y="220" width="5" height="7"/><rect x="24" y="260" width="5" height="7"/>
+          <rect x="98" y="250" width="5" height="7"/><rect x="366" y="200" width="6" height="8"/>
+          <rect x="380" y="250" width="6" height="8"/><rect x="282" y="240" width="5" height="7"/>
+        </g>
+        <!-- street -->
+        <rect x="0" y="452" width="400" height="148" fill="#060d10"/>
+        <ellipse cx="200" cy="458" rx="230" ry="12" fill="#0e191e"/>
+        <!-- lamp post -->
+        <g>
+          <rect x="306" y="230" width="6" height="228" fill="#050a0c"/>
+          <path d="M309 232 Q309 205 284 203 L282 212 Q302 214 302 234 Z" fill="#050a0c"/>
+          <circle cx="283" cy="208" r="9" fill="#ffce7a" class="lamp-flicker"/>
+          <circle cx="283" cy="208" r="30" fill="url(#no-lamp)" opacity=".7" class="lamp-flicker"/>
+          <polygon points="270,214 296,214 330,452 240,452" fill="url(#no-lightcone)"/>
+        </g>
+        <!-- detective -->
+        <g fill="#02070a">
+          <ellipse cx="200" cy="455" rx="46" ry="7" opacity=".8"/>
+          <!-- fedora: crown + wide brim -->
+          <path d="M186 288 q0 -16 14 -16 q14 0 14 16 l0 4 h-28 Z"/>
+          <ellipse cx="200" cy="293" rx="27" ry="5.5"/>
+          <rect x="193" y="298" width="14" height="12"/>
+          <path d="M176 318 q24 -14 48 0 l8 26 -6 2 -6 -14 4 84 -14 36 -10 0 4 -30 -8 0 4 30 -10 0 -14 -36 4 -84 -6 14 -6 -2 Z"/>
+        </g>
+        <!-- rim light on coat -->
+        <path d="M222 314 l6 22 M218 350 l2 40" stroke="#ffce7a" stroke-width="1.6" opacity=".55" fill="none"/>
+        <path d="M180 314 l-4 20" stroke="#35e0c8" stroke-width="1.4" opacity=".5" fill="none"/>
+        <!-- fog -->
+        <ellipse cx="110" cy="470" rx="150" ry="26" fill="url(#no-fog)" filter="url(#no-blur)"/>
+        <ellipse cx="310" cy="486" rx="160" ry="30" fill="url(#no-fog)" filter="url(#no-blur)"/>
+        <!-- title -->
+        <text x="200" y="536" text-anchor="middle" fill="#e6fffb" font-family="Cormorant Garamond, serif" font-size="36" font-weight="600" letter-spacing="6">SHADOWS</text>
+        <text x="200" y="566" text-anchor="middle" fill="#35e0c8" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" letter-spacing="4">and DECEIT</text>
+        <text x="200" y="588" text-anchor="middle" fill="#7f9aa0" font-family="Cormorant Garamond, serif" font-size="14" letter-spacing="5">DEREK ROBOTIS</text>
+      </symbol>
+
+      <!-- ── THE PYRAMID OF ISIDA ── -->
+      <symbol id="cover-isida" viewBox="0 0 400 600">
+        <defs>
+          <linearGradient id="is-sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0a0917"/><stop offset=".6" stop-color="#231637"/><stop offset="1" stop-color="#5a3417"/>
+          </linearGradient>
+          <linearGradient id="is-pyr" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e9b95c"/><stop offset="1" stop-color="#8a5a1c"/>
+          </linearGradient>
+          <linearGradient id="is-pyr-shade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#6b4413"/><stop offset="1" stop-color="#4a2d0c"/>
+          </linearGradient>
+          <radialGradient id="is-apex" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="#ffe9b0" stop-opacity=".95"/><stop offset="1" stop-color="#ffe9b0" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="is-sand" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#7c5522"/><stop offset="1" stop-color="#3a2408"/>
+          </linearGradient>
+          <linearGradient id="is-beam" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffe9b0" stop-opacity="0"/><stop offset="1" stop-color="#ffe9b0" stop-opacity=".5"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="600" fill="url(#is-sky)"/>
+        <!-- meander border -->
+        <g stroke="#d9a441" stroke-width="3" fill="none" opacity=".9">
+          <path d="M20 26 h20 v12 h-12 v-6 h6 M56 26 h20 v12 h-12 v-6 h6 M92 26 h20 v12 h-12 v-6 h6 M128 26 h20 v12 h-12 v-6 h6 M164 26 h20 v12 h-12 v-6 h6 M200 26 h20 v12 h-12 v-6 h6 M236 26 h20 v12 h-12 v-6 h6 M272 26 h20 v12 h-12 v-6 h6 M308 26 h20 v12 h-12 v-6 h6 M344 26 h20 v12 h-12 v-6 h6"/>
+        </g>
+        <!-- moon + stars -->
+        <circle cx="322" cy="98" r="26" fill="#f2e6c8" opacity=".92"/>
+        <circle cx="312" cy="92" r="5" fill="#dcd0b2" opacity=".7"/><circle cx="330" cy="106" r="4" fill="#dcd0b2" opacity=".6"/>
+        <g fill="#f2e6c8">
+          <circle cx="60" cy="90" r="1.4" class="twinkle"/><circle cx="130" cy="70" r="1" class="twinkle t2"/>
+          <circle cx="210" cy="100" r="1.3" class="twinkle t3"/><circle cx="90" cy="150" r="1"/>
+          <circle cx="270" cy="150" r="1.2" class="twinkle"/><circle cx="40" cy="200" r="1" class="twinkle t2"/>
+        </g>
+        <!-- beam from apex -->
+        <polygon points="196,120 204,120 212,330 188,330" fill="url(#is-beam)"/>
+        <circle cx="200" cy="330" r="34" fill="url(#is-apex)" class="lamp-flicker"/>
+        <!-- pyramid -->
+        <polygon points="200,330 60,470 200,470" fill="url(#is-pyr-shade)"/>
+        <polygon points="200,330 340,470 200,470" fill="url(#is-pyr)"/>
+        <path d="M200 330 L340 470 M200 330 L200 470" stroke="#ffe0a0" stroke-width="1.4" opacity=".5" fill="none"/>
+        <!-- entrance -->
+        <path d="M188 470 a12 16 0 0 1 24 0 Z" fill="#1a0f04"/>
+        <path d="M190 470 a10 14 0 0 1 20 0" fill="none" stroke="#ffe9b0" stroke-width="1.6" opacity=".8" class="lamp-flicker"/>
+        <!-- columns -->
+        <g fill="#241505">
+          <rect x="34" y="420" width="10" height="50"/><rect x="30" y="414" width="18" height="7"/><rect x="31" y="466" width="16" height="6"/>
+          <rect x="356" y="428" width="9" height="42"/><rect x="352" y="422" width="17" height="7"/><rect x="353" y="466" width="15" height="6"/>
+        </g>
+        <!-- sand -->
+        <path d="M0 470 Q90 452 200 468 Q310 484 400 462 L400 600 L0 600 Z" fill="url(#is-sand)"/>
+        <path d="M0 500 Q120 484 240 500 Q330 512 400 498 L400 520 Q300 532 190 518 Q80 506 0 520 Z" fill="#8a6228" opacity=".35"/>
+        <!-- meander bottom -->
+        <g stroke="#d9a441" stroke-width="3" fill="none" opacity=".9">
+          <path d="M20 578 h20 v-12 h-12 v6 h6 M56 578 h20 v-12 h-12 v6 h6 M92 578 h20 v-12 h-12 v6 h6 M128 578 h20 v-12 h-12 v6 h6 M164 578 h20 v-12 h-12 v6 h6 M200 578 h20 v-12 h-12 v6 h6 M236 578 h20 v-12 h-12 v6 h6 M272 578 h20 v-12 h-12 v6 h6 M308 578 h20 v-12 h-12 v6 h6 M344 578 h20 v-12 h-12 v6 h6"/>
+        </g>
+        <!-- title -->
+        <text x="200" y="180" text-anchor="middle" fill="#f6ead0" font-family="Cormorant Garamond, serif" font-size="34" font-weight="600" letter-spacing="3">THE PYRAMID</text>
+        <text x="200" y="216" text-anchor="middle" fill="#e9b95c" font-family="Cormorant Garamond, serif" font-size="30" font-style="italic" letter-spacing="4">of ISIDA</text>
+        <text x="200" y="242" text-anchor="middle" fill="#c9b183" font-family="Cormorant Garamond, serif" font-size="14" letter-spacing="5">DEREK ROBOTIS</text>
+      </symbol>
+
+    </defs>
+  </svg>
 </body>
 </html>
