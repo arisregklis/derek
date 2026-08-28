@@ -422,10 +422,10 @@
         <div class="section-head reveal">
           <span class="eyebrow">One Universe</span>
           <h2 class="section-title">The Worlds Are Connected</h2>
-          <p class="section-sub">A boy who eats the fruit of the gods. A tree that shouldn't exist. A detective who dreams another being's memories. Hover a star to follow the thread.</p>
+          <p class="section-sub">A boy who eats the fruit of the gods. A colony that was never empty. A detective who dreams another being's memories. A dig that opens a door through time — and two more worlds that rhyme with them. Hover a star to follow the thread.</p>
         </div>
         <div class="constellation-wrap reveal">
-          <svg viewBox="0 0 800 440" aria-label="Constellation map connecting the four books">
+          <svg viewBox="0 0 800 460" aria-label="Constellation map connecting the six books">
             <defs>
               <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stop-color="#fff" stop-opacity=".9"/>
@@ -436,51 +436,66 @@
             <g fill="#eae7dc" opacity=".5">
               <circle cx="90" cy="60" r="1.2" class="twinkle"/><circle cx="300" cy="40" r="1" class="twinkle t2"/>
               <circle cx="520" cy="70" r="1.4" class="twinkle t3"/><circle cx="720" cy="150" r="1"/>
-              <circle cx="60" cy="220" r="1" class="twinkle t2"/><circle cx="750" cy="300" r="1.2" class="twinkle"/>
-              <circle cx="240" cy="400" r="1"/><circle cx="430" cy="60" r="1" class="twinkle t3"/>
-              <circle cx="560" cy="410" r="1.2" class="twinkle t2"/><circle cx="360" cy="390" r="1"/>
+              <circle cx="60" cy="220" r="1" class="twinkle t2"/><circle cx="750" cy="330" r="1.2" class="twinkle"/>
+              <circle cx="240" cy="430" r="1"/><circle cx="430" cy="60" r="1" class="twinkle t3"/>
+              <circle cx="560" cy="440" r="1.2" class="twinkle t2"/><circle cx="360" cy="420" r="1"/>
             </g>
-            <!-- threads -->
+            <!-- narrative threads to the centre -->
             <g stroke-width="1.2" fill="none" opacity=".55">
-              <line x1="160" y1="120" x2="400" y2="220" stroke="#e8c56b" class="constellation-line"/>
-              <line x1="640" y1="100" x2="400" y2="220" stroke="#ff6b3d" class="constellation-line"/>
-              <line x1="630" y1="340" x2="400" y2="220" stroke="#35e0c8" class="constellation-line"/>
-              <line x1="170" y1="340" x2="400" y2="220" stroke="#d9a441" class="constellation-line"/>
-              <line x1="160" y1="120" x2="640" y2="100" stroke="#8a8778" class="constellation-line" opacity=".35"/>
-              <line x1="640" y1="100" x2="630" y2="340" stroke="#8a8778" class="constellation-line" opacity=".35"/>
-              <line x1="170" y1="340" x2="160" y2="120" stroke="#8a8778" class="constellation-line" opacity=".35"/>
+              <line x1="110" y1="250" x2="400" y2="235" stroke="#e8c56b" class="constellation-line"/>
+              <line x1="240" y1="90"  x2="400" y2="235" stroke="#ff6b3d" class="constellation-line"/>
+              <line x1="560" y1="90"  x2="400" y2="235" stroke="#35e0c8" class="constellation-line"/>
+              <line x1="690" y1="250" x2="400" y2="235" stroke="#d9a441" class="constellation-line"/>
+              <!-- twin: Anarchodaimonio is the same descent as Isida -->
+              <line x1="690" y1="250" x2="560" y2="380" stroke="#d4b15e" stroke-width="1.8" class="constellation-line" opacity=".8"/>
+              <!-- thematic echo: the Caryatid rhymes with the whole, no shared cast -->
+              <line x1="240" y1="380" x2="400" y2="235" stroke="#5b8fd6" stroke-dasharray="4 7" class="constellation-line" opacity=".7"/>
+              <!-- faint outer web -->
+              <line x1="240" y1="90" x2="560" y2="90" stroke="#8a8778" class="constellation-line" opacity=".3"/>
+              <line x1="110" y1="250" x2="240" y2="380" stroke="#8a8778" class="constellation-line" opacity=".3"/>
+              <line x1="560" y1="90" x2="690" y2="250" stroke="#8a8778" class="constellation-line" opacity=".3"/>
             </g>
             <!-- nodes -->
             <g class="constellation-node" data-world="tree" tabindex="0" role="button" aria-label="The Tree">
-              <circle class="halo" cx="160" cy="120" r="26" fill="url(#node-glow)" opacity=".35"/>
-              <circle class="core" cx="160" cy="120" r="9" fill="#e8c56b"/>
-              <text x="160" y="80" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Tree</text>
+              <circle class="halo" cx="110" cy="250" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="110" cy="250" r="9" fill="#e8c56b"/>
+              <text x="110" y="214" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Tree</text>
             </g>
             <g class="constellation-node" data-world="colony" tabindex="0" role="button" aria-label="The Second Colony">
-              <circle class="halo" cx="640" cy="100" r="26" fill="url(#node-glow)" opacity=".35"/>
-              <circle class="core" cx="640" cy="100" r="9" fill="#ff6b3d"/>
-              <text x="640" y="60" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Second Colony</text>
+              <circle class="halo" cx="240" cy="90" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="240" cy="90" r="9" fill="#ff6b3d"/>
+              <text x="240" y="52" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Second Colony</text>
             </g>
             <g class="constellation-node" data-world="noir" tabindex="0" role="button" aria-label="Shadows and Deceit">
-              <circle class="halo" cx="630" cy="340" r="26" fill="url(#node-glow)" opacity=".35"/>
-              <circle class="core" cx="630" cy="340" r="9" fill="#35e0c8"/>
-              <text x="630" y="385" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">Shadows and Deceit</text>
+              <circle class="halo" cx="560" cy="90" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="560" cy="90" r="9" fill="#35e0c8"/>
+              <text x="560" y="52" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">Shadows and Deceit</text>
             </g>
             <g class="constellation-node" data-world="isida" tabindex="0" role="button" aria-label="The Pyramid of Isida">
-              <circle class="halo" cx="170" cy="340" r="26" fill="url(#node-glow)" opacity=".35"/>
-              <circle class="core" cx="170" cy="340" r="9" fill="#d9a441"/>
-              <text x="170" y="385" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Pyramid of Isida</text>
+              <circle class="halo" cx="690" cy="250" r="26" fill="url(#node-glow)" opacity=".35"/>
+              <circle class="core" cx="690" cy="250" r="9" fill="#d9a441"/>
+              <text x="690" y="214" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Pyramid of Isida</text>
+            </g>
+            <g class="constellation-node" data-world="anarcho" tabindex="0" role="button" aria-label="Το Αναρχοδαιμόνιο">
+              <circle class="halo" cx="560" cy="380" r="24" fill="url(#node-glow)" opacity=".32"/>
+              <circle class="core" cx="560" cy="380" r="8" fill="#d4b15e"/>
+              <text x="560" y="418" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">Το Αναρχοδαιμόνιο</text>
+            </g>
+            <g class="constellation-node" data-world="caryatid" tabindex="0" role="button" aria-label="The Return of the Caryatid">
+              <circle class="halo" cx="240" cy="380" r="24" fill="url(#node-glow)" opacity=".32"/>
+              <circle class="core" cx="240" cy="380" r="8" fill="#5b8fd6"/>
+              <text x="240" y="418" text-anchor="middle" fill="#eae7dc" font-size="15" font-family="Cormorant Garamond, serif" font-style="italic">The Return of the Caryatid</text>
             </g>
             <g class="constellation-node" data-world="center" tabindex="0" role="button" aria-label="One Universe">
-              <circle class="halo" cx="400" cy="220" r="34" fill="url(#node-glow)" opacity=".5"/>
-              <circle class="core" cx="400" cy="220" r="12" fill="#eae7dc"/>
-              <text x="400" y="262" text-anchor="middle" fill="#a7a49b" font-size="13" font-family="Inter, sans-serif" letter-spacing="3">ONE UNIVERSE</text>
+              <circle class="halo" cx="400" cy="235" r="34" fill="url(#node-glow)" opacity=".5"/>
+              <circle class="core" cx="400" cy="235" r="12" fill="#eae7dc"/>
+              <text x="400" y="277" text-anchor="middle" fill="#a7a49b" font-size="13" font-family="Inter, sans-serif" letter-spacing="3">ONE UNIVERSE</text>
             </g>
           </svg>
         </div>
         <div class="universe-note reveal" id="universe-note">
           <h3>One Universe</h3>
-          <p>Four books, one thread: humanity reaching past its limits — up to the stars, down into the earth, back through time — and finding that something was always reaching back.</p>
+          <p>Six books, one thread. Four share a single unfolding story — a boy, a colony, a detective, a dig. A fifth tells the dig again in another tongue. A sixth holds the whole thread to the light. Humanity reaches past its limits, and something reaches back.</p>
         </div>
       </div>
     </section>

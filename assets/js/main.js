@@ -212,9 +212,17 @@
       t: "The Pyramid of Isida",
       p: "Archaeologist Aristides digs at Marathon, where Herodes Atticus raised a pyramid to the goddess Isida — and the excavation opens a door through time itself, to oracles, sirens, and the Founder's warning."
     },
+    anarcho: {
+      t: "Το Αναρχοδαιμόνιο — Isida's twin",
+      p: "Not a neighbour to Isida but its twin: the same ten chapters, the same door at Marathon opening onto another era, told under a Greek title and a harder law — know thyself, for truth is the only path. Where Isida is the myth, this is the reckoning."
+    },
+    caryatid: {
+      t: "The Return of the Caryatid — the thread itself",
+      p: "No shared cast, but the same blood. Its Orion is an archaeologist lost in the arms of time, cousin in spirit to Aristides; its 'two suns' and parallel universe are the doubled world the detective walks; ambrosia, sirens and oracles drift through it. Time that won't stay buried, myth fused with history, and always the longing to return home."
+    },
     center: {
       t: "One Universe",
-      p: "Four books, one thread: humanity reaching past its limits — up to the stars, down into the earth, back through time — and finding that something was always reaching back."
+      p: "Six books, one thread. Four share a single unfolding story; a fifth tells the dig again in another tongue; a sixth holds the whole thread to the light. Humanity reaches past its limits — and something reaches back."
     }
   };
   document.querySelectorAll(".constellation-node").forEach(node => {
