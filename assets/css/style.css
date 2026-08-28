@@ -195,7 +195,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 /* ── Library strip (mini covers) ── */
 .library { padding: 90px 0 40px; }
-.library-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.library-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .shelf-card {
   position: relative; border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--border); background: var(--surface);
